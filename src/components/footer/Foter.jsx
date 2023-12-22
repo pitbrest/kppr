@@ -27,7 +27,7 @@ export const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <SiGithub size="cover" />
+              <SiGithub />
             </a>
           </div>
           <div>
