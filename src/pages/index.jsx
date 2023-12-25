@@ -1,5 +1,5 @@
 import About from "./About";
-import Contacts from "./Contacts";
+import Contacts from "./contacts/Contacts";
 import ErrorPage from "./ErrorPage";
 import News from "./News";
 import Production from "./Production";
