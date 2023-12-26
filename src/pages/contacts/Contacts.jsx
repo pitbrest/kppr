@@ -3,17 +3,17 @@ import { Container } from "../../components/Container";
 
 import { GiRotaryPhone } from "react-icons/gi";
 import { MdPhoneIphone } from "react-icons/md";
+import { MdOutlineFax } from "react-icons/md";
 
 function Contacts() {
   return (
     <section className="break-words">
       <Container>
         <div className="p-2">
-          {/* <h2 className="pb-5 font-extrabold">Контакная информация</h2> */}
           <div className="info-wrapper border flex items-start justify-start flex-wrap text-sm">
             <div className="w-full p-2">
               <div className="border-b w-full">
-                <h3 className="text-base font-bold pb-3">Головное предприятие в г.Бресте</h3>
+                <h3 className="text-lg font-bold py-5">Головное предприятие в г.Бресте</h3>
               </div>
               <div className="flex gap-10 min-[1024px]:flex-nowrap flex-wrap justify-between">
                 <div className="">
@@ -52,6 +52,7 @@ export default Contacts;
 const contactsItem = (data) => {
   return data.map((item) => {
     const { call, name, numbers } = item;
+
     return (
       <div key={item.name}>
         <hr className="my-2" />
@@ -67,14 +68,7 @@ const contactsItem = (data) => {
             )}
           </div>
           <div className="flex items-start justify-start gap-3 flex-col">
-            <div className="flex items-center justify-start gap-3">
-              <MdPhoneIphone />
-              <a href={numbers[0] && formatNumber(numbers[0])}>{numbers[0] || ""}</a>
-            </div>
-            <div className="flex items-center justify-start gap-3">
-              <GiRotaryPhone />
-              <a href={numbers[1] && formatNumber(numbers[1])}>{numbers[1] || ""}</a>
-            </div>
+            {numbersHandler(numbers)}
           </div>
         </li>
       </div>
@@ -82,19 +76,85 @@ const contactsItem = (data) => {
   });
 };
 
+const numbersHandler = (numbers) => {
+  return numbers.map((number, idx) => {
+    if (idx === 0 && number.length !== 0) {
+      return (
+        <div
+          className="flex items-center justify-start gap-3"
+          key={number}
+        >
+          <MdOutlineFax />
+          <p>{number}</p>
+        </div>
+      );
+    }
+    if (idx !== 0 && number.includes("37516")) {
+      return (
+        <div
+          className="flex items-center justify-start gap-3"
+          key={number}
+        >
+          <GiRotaryPhone />
+          <a href={formatNumber(number)}>{number}</a>
+        </div>
+      );
+    }
+    if (idx !== 0 && !number.includes("37516")) {
+      return (
+        <div
+          className="flex items-center justify-start gap-3"
+          key={number}
+        >
+          <MdPhoneIphone />
+          <a href={formatNumber(number)}>{number}</a>
+        </div>
+      );
+    }
+    return null;
+  });
+};
+
 const contacts = [
-  { call: "Директор", name: "Плющеня Николай Николаевич", numbers: ["(+37529) 373-10-15"] },
+  { call: "Директор", name: "Плющеня Николай Николаевич", numbers: ["", "(+37529) 373-10-15"] },
+  {
+    call: "Приемная",
+    name: "",
+    numbers: ["(+375162) 25-94-01", "(+375162) 25-94-00"],
+  },
+  {
+    call: "Главный бухгалтер",
+    name: "Исакова Татьяна Павловна",
+    numbers: ["", "(+37533) 672-15-31"],
+  },
   {
     call: "Заместитель директора - главный инженер",
     name: "Петров Александр Анатольевич",
-    numbers: ["(+37529) 806-51-52"],
+    numbers: ["", "(+37529) 806-51-52"],
   },
+
   {
     call: "Заместитель директора",
-    name: "Овсяник Игорь Анатольевич ",
-    numbers: ["(+37529) 102-22-86"],
+    name: "Овсяник Игорь Анатольевич",
+    numbers: ["", "(+37529) 102-22-86"],
     direction: [
       "огнезащитная обработка, обучение пожарно-техническому минимуму (ПТМ), проверка противопожарного водоснабжения (пожарные краны и гидранты)",
+    ],
+  },
+  {
+    call: "Мастер",
+    name: "Ковалевич Виктор Александрович",
+    numbers: ["", "(+37529) 380-04-02"],
+    direction: [
+      "пожарная сигнализации, системы оповещения, установки пожаротушения, видеонаблюдение, домофонные системы, системы контроля и управления доступом",
+    ],
+  },
+  {
+    call: "Мастер",
+    name: "Овсяник Татьяна Владимировна",
+    numbers: ["", "(+37529) 222-67-92", "(+37529) 108-82-80", "(+375162) 25-94-07"],
+    direction: [
+      "пожарная сигнализации, системы оповещения, установки пожаротушения, видеонаблюдение, домофонные системы, системы контроля и управления доступом",
     ],
   },
 ];

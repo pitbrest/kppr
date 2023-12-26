@@ -7,7 +7,7 @@ export const Layout = () => {
     <>
       <Header />
       {/* <hr className="max-w-[1600px] w-full m-auto" /> */}
-      <main className="min-[1920px]:min-h-[calc(100vh-168px)] min-h-[calc(100vh-140px)] py-10">
+      <main className="min-[1920px]:min-h-[calc(100vh-168px)] min-h-[calc(100vh-140px)] py-10 max-[576px]:py-2">
         <Outlet />
       </main>
       {/* <hr className="max-w-[1600px] w-full m-auto" /> */}
