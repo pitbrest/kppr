@@ -7,7 +7,6 @@ function HomePage() {
       <Container>
         HomePage
         <div className="flex justify-center">
-          {" "}
           <img
             src={Img}
             alt=""
