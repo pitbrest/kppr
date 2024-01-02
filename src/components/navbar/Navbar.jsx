@@ -7,7 +7,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { navItems } from "../../appData/navData";
 // burger icon
 import { GiHamburgerMenu } from "react-icons/gi";
 // nav icons
@@ -18,7 +18,6 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 
 const NavBar = () => {
-  const navItems = useSelector((state) => state.navReducer.items);
   const currentIcon = (idx) => {
     if (idx === 0) {
       return <RiTeamFill />;
