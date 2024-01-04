@@ -58,72 +58,72 @@ const filialsContacts = [
     adress: "ул.Советская, 25",
     eMail: "bdpokobrin@gmail.com",
     numbers: ["(+3751642) 3-85-52", "(+37529) 725-08-88"],
-    map: (
-      <div style={{ position: "relative", overflow: "hidden" }}>
-        <a
-          href="https://yandex.by/maps/26010/kobrin/?utm_medium=mapframe&utm_source=maps"
-          style={{ color: "#eee", fontSize: "12px", position: "absolute", top: "0px" }}
-        >
-          Кобрин
-        </a>
-        <a
-          href="https://yandex.by/maps/26010/kobrin/?from=mapframe&ll=24.354413%2C52.211471&mode=routes&rtext=~52.211583%2C24.354405&rtt=auto&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyNDg5Nzc2MDQyEmTQkdC10LvQsNGA0YPRgdGMLCDQkdGA0Y3RgdGG0LrQsNGPINCy0L7QsdC70LDRgdGG0YwsINCa0L7QsdGA0YvQvSwg0KHQsNCy0LXRhtC60LDRjyDQstGD0LvRltGG0LAsIDI1IgoN0dXCQRWq2FBC&source=mapframe&utm_medium=mapframe&utm_source=maps&z=18"
-          style={{ color: "#eee", fontSize: "12px", position: "absolute", top: "14px" }}
-        >
-          Советская улица, 25: – Яндекс Карты
-        </a>
-        <iframe
-          src="https://yandex.by/map-widget/v1/?from=mapframe&ll=24.353951%2C52.211675&mode=whatshere&source=mapframe&utm_source=mapframe&whatshere%5Bpoint%5D=24.354334%2C52.211479&whatshere%5Bzoom%5D=17&z=18.25"
-          width="230"
-          height="200"
-          allowFullScreen={true}
-          style={{ position: "relative" }}
-          title="title"
-        ></iframe>
-      </div>
-    ),
+
+    map: "https://yandex.by/maps/-/CDuMiK-u",
   },
   {
     city: "г.Пружаны",
     adress: "ул.Комсомольская, 6 Б",
     eMail: "pruzhanybdpo@tut.by",
     numbers: ["(+3751632) 9-23-09", "(+37529) 795-26-81"],
-    map: (
-      <div style={{ position: "relative", overflow: "hidden" }}>
-        <a
-          href="https://yandex.by/maps/26929/pruzhany/?utm_medium=mapframe&utm_source=maps"
-          style={{ color: "#eee", fontSize: "12px", position: "absolute", top: "0px" }}
-        >
-          Пружаны
-        </a>
-        <a
-          href="https://yandex.by/maps/26929/pruzhany/house/Zk0YcgJlSUYCQFtofXl0eHhiYg==/?ll=24.455034%2C52.559416&utm_medium=mapframe&utm_source=maps&z=17.25"
-          style={{ color: "#eee", fontSize: "12px", position: "absolute", top: "14px" }}
-        >
-          Комсомольская улица, 6Б — Яндекс Карты
-        </a>
-        <iframe
-          src="https://yandex.by/map-widget/v1/?ll=24.455034%2C52.559416&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0NjM4MzU3NTEzEnzQkdC10LvQsNGA0YPRgdGMLCDQkdGA0Y3RgdGG0LrQsNGPINCy0L7QsdC70LDRgdGG0YwsINCz0L7RgNCw0LQg0J_RgNGD0LbQsNC90YssINCa0LDQvNGB0LDQvNC-0LvRjNGB0LrQsNGPINCy0YPQu9GW0YbQsCwgNtCRIgoN6KPDQRXYPFJC&z=17.25"
-          width="230"
-          height="200"
-          allowFullScreen={true}
-          style={{ position: "relative" }}
-          title="title"
-        ></iframe>
-      </div>
-    ),
+    sections: null,
+    map: "https://yandex.by/maps/-/CDuMiC~h",
   },
   {
     city: "г.Береза",
     adress: "ул.Пушкина, 12",
     eMail: "berezabdpo@mail.ru",
     numbers: ["(+3751643) 2-23-09", "(+37529) 860-53-59"],
+    sections: null,
+    map: "https://yandex.by/maps/-/CDuMiOnN",
   },
   {
     city: "г.Ивацевичи",
     adress: "ул.Зеленая, 6 A",
     eMail: "pogarnik.bdpo@bk.ru",
     numbers: ["(+3751645) 2-49-10", "(+37533) 606-38-82"],
+    sections: null,
+    map: "https://yandex.by/maps/-/CDuMiO3z",
+  },
+  {
+    city: "г.Дрогичин",
+    adress: "ул.Октябрьская, 24 A",
+    eMail: "drogichinbdpo@mail.ru",
+    numbers: ["(+3751644) 3-14-14", "(+37529) 672-14-47"],
+    sections: null,
+    map: "https://yandex.by/maps/-/CDuMiS8-",
+  },
+  {
+    city: "г.Пинск",
+    adress: "ул.Базовая, 16 Б",
+    eMail: "pinsk_kppr@mail.ru",
+    numbers: ["(+375165) 31-60-86", "(+375165) 65-09-11", "(+37529) 313-62-01"],
+    sections: null,
+    map: "https://yandex.by/maps/-/CDuMiWI2",
+  },
+  {
+    city: "г.Иваново",
+    adress: "ул.Карла Маркса, 39/1",
+    eMail: "zhushma77@bk.ru",
+    numbers: ["", "(+37529) 800-18-55"],
+    sections: null,
+    map: "https://yandex.by/maps/-/CDuMiWoA",
+  },
+  {
+    city: "г.Лунинец",
+    adress: "ул.Октябрьская, 24",
+    eMail: "luninets_direktsiya@mail.ru",
+    numbers: ["(+3751647) 2-06-28", "(+37529) 199-37-04"],
+    sections: null,
+    map: "https://yandex.by/maps/-/CDuMi05L",
+  },
+  {
+    city: "г.Столин",
+    adress: "ул.Советская, 75",
+    eMail: "stolindpo@mail.ru",
+    numbers: ["(+3751655) 2-85-45", "(+37529) 173-31-18"],
+    sections: null,
+    map: "https://yandex.by/maps/-/CDuMi0l1",
   },
   {
     city: "г.Барановичи",
@@ -150,36 +150,7 @@ const filialsContacts = [
         direction: ["прием заказов (заявок), касающихся деятельности предприятия"],
       },
     ],
-  },
-  {
-    city: "г.Дрогичин",
-    adress: "ул.Октябрьская, 24 A",
-    eMail: "drogichinbdpo@mail.ru",
-    numbers: ["(+3751644) 3-14-14", "(+37529) 672-14-47"],
-  },
-  {
-    city: "г.Пинск",
-    adress: "ул.Базовая, 16 Б",
-    eMail: "pinsk_kppr@mail.ru",
-    numbers: ["(+375165) 31-60-86", "(+375165) 65-09-11", "(+37529) 313-62-01"],
-  },
-  {
-    city: "г.Иваново",
-    adress: "ул.Карла Маркса, 39/1",
-    eMail: "zhushma77@bk.ru",
-    numbers: ["", "(+37529) 800-18-55"],
-  },
-  {
-    city: "г.Лунинец",
-    adress: "ул.Октябрьская, 24",
-    eMail: "luninets_direktsiya@mail.ru",
-    numbers: ["(+3751647) 2-06-28", "(+37529) 199-37-04"],
-  },
-  {
-    city: "г.Столин",
-    adress: "ул.Советская, 75",
-    eMail: "stolindpo@mail.ru",
-    numbers: ["(+3751655) 2-85-45", "(+37529) 173-31-18"],
+    map: "https://yandex.by/maps/-/CDuMi8Jm",
   },
 ];
 
@@ -240,17 +211,16 @@ const createContactsItem = (data) => {
 
     return (
       <div
-        key={item.name}
-        className=""
+        key={item.numbers}
+        className="border p-2"
       >
-        <hr className="my-2" />
-        <p className="font-bold">{call}</p>
-        <li className="flex items-start min-[1024px]:justify-between max-[1023px]:w-full min-[1024px]:flex-row flex-col">
+        <p className="font-extrabold">{call}</p>
+        <div className="main-contacts">
           <div className="flex flex-col basis-2/3">
-            <p className="py-2">{name}</p>
+            <p className="py-2 font-medium">{name}</p>
             {item.direction && (
               <p className="pb-4 max-w-[90%]">
-                <span className="font-medium">Направления : </span>
+                <span className="font-bold">Направления : </span>
                 <span className="">{item.direction}</span>
               </p>
             )}
@@ -258,7 +228,7 @@ const createContactsItem = (data) => {
           <div className="flex items-start justify-start gap-3 flex-col">
             {numbersHandler(numbers)}
           </div>
-        </li>
+        </div>
       </div>
     );
   });
@@ -266,25 +236,47 @@ const createContactsItem = (data) => {
 
 const createFilialContactsItem = (data) => {
   return data.map((item) => {
-    const { city, adress, eMail, numbers, sections = null, map = null } = item;
+    const { city, adress, eMail, numbers, sections, map = null } = item;
 
     return (
       <div
         key={item.city}
-        className="flex justify-between border p-2"
+        className="flex flex-col min-[5px]:flex-row min-[576px] justify-between border p-2"
       >
-        <div className="">
-          <p className="font-bold pb-2">{city}</p>
-          <p>{adress}</p>
-          <p className="flex items-center gap-2">
-            <IoIosMail /> <span>{eMail}</span>
+        <div>
+          <a
+            href={map}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p className="font-extrabold">{city}</p>
+            {adress}
+          </a>
+          <p className="flex items-center gap-2 my-2">
+            <IoIosMail />
+            <a href={`mailto:${eMail}`}>{eMail}</a>
           </p>
-          <div className="py-2">{numbersHandler(numbers)}</div>
+          <div className="flex flex-col gap-[3px]">{numbersHandler(numbers)}</div>
+          <div className="baranovichi">{sections && createContactsItem(sections)}</div>
         </div>
-        {map && <div className="">{map}</div>}
+        {/* {map && <div className="">{map}</div>} */}
       </div>
     );
   });
 };
 
-export { contacts, filialsContacts, createContactsItem, createFilialContactsItem };
+const pageScrollingHandler = (direction) => {
+  if (direction === "top") {
+    window.scrollTo(0, 0);
+  } else {
+    window.scrollTo(0, 10000);
+  }
+};
+
+export {
+  contacts,
+  filialsContacts,
+  createContactsItem,
+  createFilialContactsItem,
+  pageScrollingHandler,
+};

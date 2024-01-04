@@ -5,30 +5,42 @@ import {
   filialsContacts,
   createContactsItem,
   createFilialContactsItem,
+  pageScrollingHandler,
 } from "../../appData/contactsData";
 import { IoIosMail } from "react-icons/io";
+import { FaArrowAltCircleUp } from "react-icons/fa";
+import { FaArrowAltCircleDown } from "react-icons/fa";
 
 function Contacts() {
+  const screenWidth = window.screen.width;
+
   return (
     <section className="break-words">
       <Container>
-        <div className="p-2">
+        <div className="">
           <div className="info-wrapper flex items-start justify-start flex-wrap text-sm">
-            <div className="w-full p-2">
-              <div className="border-b w-full">
-                <h3 className="text-lg font-bold py-2 min-[576px]:py-5">
+            <div className="w-full">
+              <div className="w-full">
+                <h3 className="text-lg font-extrabold py-2 min-[576px]:pb-2 min-[576px]:pt-0">
                   Головное предприятие в г.Бресте
                 </h3>
               </div>
-              <div className="flex min-[1024px]:flex-nowrap flex-wrap justify-between mt-1">
+              <div className="flex flex-nowrap justify-between mt-1">
                 <div className="flex flex-col gap-1">
-                  <div className="flex justify-between flex-wrap gap-4 min-[576px]:flex-nowrap ">
+                  <div className="flex justify-between flex-wrap gap-4 min-[576px]:flex-nowrap border-t border-b">
                     <div className="flex flex-col gap-2">
                       <h4 className="text-sm font-semibold mt-2">
                         Унитарное предприятие "Брестский областной комбинат противопожарных работ"
                         РГОО "БДПО"
                       </h4>
-                      <p className="text-sm">224032, г.Брест, ул.Советской Конституции, 30-1</p>
+                      <a
+                        href="https://yandex.by/maps/-/CDuQbSKR"
+                        className="text-sm"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        224032, г.Брест, ул.Советской Конституции, 30-1
+                      </a>
                       <div className="flex items-center gap-2 font-medium">
                         <IoIosMail />
                         <a href="mailto:bokppr.@mail.ru"> bokppr.@mail.ru</a>
@@ -48,12 +60,12 @@ function Contacts() {
                       ></iframe>
                     </div>
                   </div>
-                  <ul className="cont">{createContactsItem(contacts)}</ul>
+                  <div className="cont py-3">{createContactsItem(contacts)}</div>
                 </div>
                 <hr className="my-2" />
               </div>
-              <div className="border-b border-t w-full">
-                <h3 className="text-lg font-bold py-5">
+              <div className="w-full">
+                <h3 className="text-lg font-bold py-5 border-t border-b mb-4 mt-1">
                   Подразделения в районных центрах Брестской области
                 </h3>
                 <div className="filials-container">{createFilialContactsItem(filialsContacts)}</div>
@@ -61,6 +73,19 @@ function Contacts() {
             </div>
           </div>
         </div>
+
+        {screenWidth <= 992 && (
+          <div className="page-navigation flex flex-col gap-2 fixed top-[50vh] right-[1rem]">
+            <FaArrowAltCircleUp
+              onClick={() => pageScrollingHandler("top")}
+              size={30}
+            />
+            <FaArrowAltCircleDown
+              onClick={() => pageScrollingHandler("bottom")}
+              size={30}
+            />
+          </div>
+        )}
       </Container>
     </section>
   );
