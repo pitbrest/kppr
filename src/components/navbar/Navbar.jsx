@@ -81,7 +81,7 @@ const NavBar = () => {
         <GiHamburgerMenu
           onClick={toggleDrawer("left", true)}
           size="30"
-          color="#004f80"
+          color={`var(--font-color-light)`}
         />
         <Drawer
           anchor="left"
@@ -97,9 +97,9 @@ const NavBar = () => {
             <NavLink
               key={item.href}
               to={item.href}
-              className="p-2"
+              className="p-2 nav-item"
             >
-              <li>{item.name.toUpperCase()}</li>
+              <li className="">{item.name.toUpperCase()}</li>
             </NavLink>
           ))}
         </ul>

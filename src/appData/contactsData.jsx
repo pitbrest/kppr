@@ -50,6 +50,14 @@ const contacts = [
       "пожарная сигнализации, системы оповещения, установки пожаротушения, видеонаблюдение, домофонные системы, системы контроля и управления доступом",
     ],
   },
+  {
+    call: "Магазин 101",
+    name: "",
+    numbers: ["(+375162) 25-94-05", "(+37529) 182-20-44", "(+37529) 107-85-53"],
+    direction: [
+      "торговля средствами противопожарной защиты, перезарядка и ремонт огнетушителей, разработка планов эвакуации",
+    ],
+  },
 ];
 
 const filialsContacts = [
@@ -225,7 +233,7 @@ const createContactsItem = (data) => {
               </p>
             )}
           </div>
-          <div className="flex items-start justify-start gap-3 flex-col">
+          <div className="flex items-start justify-start gap-1 flex-col">
             {numbersHandler(numbers)}
           </div>
         </div>
@@ -243,7 +251,7 @@ const createFilialContactsItem = (data) => {
         key={item.city}
         className="flex flex-col min-[5px]:flex-row min-[576px] justify-between border p-2"
       >
-        <div>
+        <div className="">
           <a
             href={map}
             target="_blank"

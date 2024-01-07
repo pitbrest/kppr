@@ -8,7 +8,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-6 text-[0.8rem] min-[1920px]:text-[1rem] font-bold flex items-center">
+    <footer className="py-4 min-[1280px]:text-[0.8rem] text-[0.6rem] font-bold flex items-center bg-[--bgc-dark] text-[--fc-light]">
       <Container>
         <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">

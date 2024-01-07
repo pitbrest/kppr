@@ -1,0 +1,3 @@
+.navigation div.active {
+  background-color: var(--bgc-dark);
+}

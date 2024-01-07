@@ -4,57 +4,68 @@
 @tailwind utilities;
 
 :root {
-  --bg-color-light: rgb(255, 255, 255);
-  --bg-color-grey: hwb(180 96% 3%);
-  /* --bg-color-grey: #e3e7e9; */
-  --font-color-dark: #0c4a6e;
-  --color1: #6a7777;
-  --color2: #d0c8bd;
-  --color3: #cbd0dc;
+  --bgc-light: rgb(255, 255, 255);
+  --bgc-grey: rgba(13, 147, 174, 0.163);
+  --bgc-dark: #047c94;
+
+  --fc-light: #fcfcee;
+  --fc-dark: #036679;
+
+  --brdc-light: rgb(255, 255, 255);
+  --brdc-semi: #0c4a6e38;
+  --brdc-dark: #0c4a6e;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--font-color-dark);
+  color: var(--fc-dark);
   font-size: 1.2rem;
   user-select: none;
 }
-/* h3 {
-  font-size: calc(14px + 2 * ((100vw - 320px) / (1280 - 320))) !important;
-  line-height: normal;
-} */
-hr {
-  border-color: #0c4a6e3c;
-}
-header,
-footer {
-  background-color: #f5f5f59d;
+* {
+  border-color: var(--brdc-semi);
 }
 
 /* Navigation */
-
-nav a.active li {
+nav a {
+  line-height: normal;
+}
+nav a:hover:not(.active) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--fc-light);
+  text-underline-offset: 3px;
+  margin-top: 5px;
+}
+nav a li {
   padding: 5px;
-  border-top: 2px solid;
-  border-bottom: 2px solid !important;
-  border-color: #0c4a6e;
-  margin-bottom: 9px;
+  border-top: 2px solid transparent !important;
+  border-bottom: 2px solid transparent !important;
+}
+nav a.active li {
+  border-top: 2px solid var(--fc-light) !important;
+  border-bottom: 2px solid var(--fc-light) !important;
 }
 @media (max-width: 768px) {
   a[aria-current] li {
-    background-color: #e9e7e7;
+    background-color: var(--bgc-grey);
+    font-weight: 600 !important;
   }
 }
 
 ul.MuiList-root {
   padding-top: 0;
 }
-nav a:hover:not(.active) {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #0c4a6e;
-  text-underline-offset: 3px;
-  margin-top: 5px;
+
+@media (max-width: 576px) {
+  .MuiList-root {
+    color: var(--fc-dark) !important;
+    font-weight: 500 !important;
+  }
+  .MuiListItemIcon-root {
+    min-width: 35px !important;
+    color: var(--fc-dark) !important;
+  }
 }
 
 /* @media (min-width: 576px) {
@@ -65,4 +76,9 @@ nav a:hover:not(.active) {
       rgba(0, 0, 0, 0.06) 0px 4px 4px, rgba(0, 0, 0, 0.06) 0px 4px 8px,
       rgba(0, 0, 0, 0.06) 0px 8px 16px;
   }
+} */
+
+/* h3 {
+  font-size: calc(14px + 2 * ((100vw - 320px) / (1280 - 320))) !important;
+  line-height: normal;
 } */

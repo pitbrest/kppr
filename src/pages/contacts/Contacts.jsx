@@ -21,13 +21,13 @@ function Contacts() {
           <div className="info-wrapper flex items-start justify-start flex-wrap text-sm">
             <div className="w-full">
               <div className="w-full">
-                <h3 className="text-lg font-extrabold py-2 min-[576px]:pb-2 min-[576px]:pt-0">
+                <h3 className="text-lg font-extrabold py-2 min-[576px]:pb-6 min-[576px]:pt-0">
                   Головное предприятие в г.Бресте
                 </h3>
               </div>
               <div className="flex flex-nowrap justify-between mt-1">
                 <div className="flex flex-col gap-1">
-                  <div className="flex justify-between flex-wrap gap-4 min-[576px]:flex-nowrap border-t border-b">
+                  <div className="flex justify-between flex-wrap gap-4 min-[576px]:flex-nowrap border-t-2 border-b border-t-[--font-color-dark]">
                     <div className="flex flex-col gap-2">
                       <h4 className="text-sm font-semibold mt-2">
                         Унитарное предприятие "Брестский областной комбинат противопожарных работ"
@@ -65,7 +65,7 @@ function Contacts() {
                 <hr className="my-2" />
               </div>
               <div className="w-full">
-                <h3 className="text-lg font-bold py-5 border-t border-b mb-4 mt-1">
+                <h3 className="text-lg font-bold py-5 border-t-2 border-b-2 border-[--font-color-dark] mb-4 mt-1">
                   Подразделения в районных центрах Брестской области
                 </h3>
                 <div className="filials-container">{createFilialContactsItem(filialsContacts)}</div>

@@ -6,11 +6,9 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      {/* <hr className="max-w-[1600px] w-full m-auto" /> */}
-      <main className="min-[1920px]:min-h-[calc(100vh-168px)] min-h-[calc(100vh-140px)] py-10 max-[576px]:py-2">
+      <main className="min-[576px]:min-h-[calc(100vh-127px)] min-h-[calc(100vh-111.19px)] py-10 max-[576px]:py-2">
         <Outlet />
       </main>
-      {/* <hr className="max-w-[1600px] w-full m-auto" /> */}
       <Footer />
     </>
   );
