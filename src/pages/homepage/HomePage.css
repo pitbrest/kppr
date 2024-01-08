@@ -1,3 +1,19 @@
 .navigation div.active {
   background-color: var(--bgc-dark);
 }
+.slider-img {
+  position: relative;
+  top: 0;
+  left: 550px;
+  opacity: 0;
+}
+.slider-img.fadeIn {
+  opacity: 1;
+  transform: translateX(-550px);
+  transition: all 0.9s linear 0s;
+}
+.slider-img.fadeOut {
+  opacity: 0;
+  transform: translateX(-1100px);
+  transition: all 0.9s linear 0s;
+}
