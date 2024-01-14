@@ -267,7 +267,6 @@ const createFilialContactsItem = (data) => {
           <div className="flex flex-col gap-[3px]">{numbersHandler(numbers)}</div>
           <div className="baranovichi">{sections && createContactsItem(sections)}</div>
         </div>
-        {/* {map && <div className="">{map}</div>} */}
       </div>
     );
   });

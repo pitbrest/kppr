@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "../Container";
-import Logo from "../../assets/images/logo.png";
 import AltLogo from "../../assets/images/altLogo.webp";
 import { Link } from "react-router-dom";
 
