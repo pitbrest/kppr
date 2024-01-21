@@ -7,11 +7,11 @@ import Molniezashita from "../assets/images/slider/molniezashita.jpg";
 import Proektirovanie from "../assets/images/slider/proektirovanie.jpg";
 import PogarniyKran from "../assets/images/slider/pogarniy-kran.jpg";
 import Ognezashita from "../assets/images/slider/ognezashita.jpg";
-import PproverkaVentkanalov from "../assets/images/slider/proverka-ventkanalov.jpg";
+import ProverkaVentkanalov from "../assets/images/slider/proverka-ventkanalov.jpg";
 
 import { SwiperSlide } from "swiper/react";
 
-const slidesData = [
+const sliderData = [
   { label: "Комплексные решения в сфере безопасности", img: AllDir },
   {
     label: "Торговля средствами противопожарной защиты и сопутствующими товарами",
@@ -48,21 +48,23 @@ const slidesData = [
   },
   {
     label: "Проверка технического состояния вентиляционных и дымовых каналов",
-    img: PproverkaVentkanalov,
+    img: ProverkaVentkanalov,
   },
 ];
 
 const createSlide = (data) =>
   data.map((i) => (
     <SwiperSlide key={i.label}>
-      <div className="flex flex-col justify-start items-center gap-4">
-        <img
-          src={i.img}
-          alt="slide img"
-        />
-        <p className="min-[768px]:w-[50%] w-[70%]">{i.label}</p>
+      <div className="">
+        <div className="flex flex-col justify-start items-center gap-4">
+          <img
+            src={i.img}
+            alt="slide img"
+          />
+          {/* <p className="min-[768px]:w-[35%] w-[70%] font-extralight underline">{i.label}</p> */}
+        </div>
       </div>
     </SwiperSlide>
   ));
 
-export { slidesData, createSlide };
+export { sliderData, createSlide };

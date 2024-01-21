@@ -28,7 +28,7 @@ function Contacts() {
               <div className="flex flex-nowrap justify-between mt-1">
                 <div className="flex flex-col gap-1">
                   <div className="flex justify-between flex-wrap gap-4 min-[576px]:flex-nowrap border-b border-t mt-2">
-                    <div className="flex flex-col gap-2 pb-2">
+                    <div className="flex flex-col gap-2 pb-2 px-2">
                       <h4 className="text-sm font-semibold mt-2">
                         Унитарное предприятие "Брестский областной комбинат противопожарных работ"
                         РГОО "БДПО"

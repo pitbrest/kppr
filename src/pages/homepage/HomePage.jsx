@@ -1,39 +1,38 @@
-import { Container } from "../../components/Container";
 import "./HomePage.css";
-import { slidesData, createSlide } from "../../appData/slidesData";
+import { Container } from "../../components/Container";
 
-import React from "react";
-// Import Swiper React components
-import { Swiper } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-// import required modules
-import { Autoplay, Navigation } from "swiper/modules";
+import { Slider } from "../../components/Slider";
+import { sliderData, createSlide } from "../../appData/sliderData";
+
+import {
+  advantagesData,
+  createAdvantages,
+  resultsData,
+  createResults,
+} from "../../appData/homePageData";
 
 function HomePage() {
   return (
     <>
       <Container>
-        <section className="h-[60vh] slider">
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            loop={true}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Navigation]}
-            className="mySwiper"
-          >
-            {createSlide(slidesData)}
-          </Swiper>
+        <section className="slider min-[900px]:h-[60vh] h-auto">
+          <Slider>{createSlide(sliderData)}</Slider>
+        </section>
+        <section className="">
+          <h3 className="text-center min-[594px]:text-6xl text-5xl font-semibold my-20 pt-3 pb-5 px-2 bg-[--bgc-gold]">
+            Наши преимущества
+          </h3>
+          {createAdvantages(advantagesData)}
+        </section>
+        <section>
+          <h3 className="text-center min-[594px]:text-6xl text-5xl font-semibold my-20 pt-3 pb-5 px-2 bg-[--bgc-gold]">
+            Наши результаты
+          </h3>
+          {/* <CountUpComponent
+            start={10}
+            end={500}
+          /> */}
+          {createResults(resultsData)}
         </section>
       </Container>
     </>

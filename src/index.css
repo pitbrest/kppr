@@ -3,23 +3,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/Oswald/Oswald.ttf") format("opentype");
+}
+
 :root {
   --bgc-light: rgb(255, 255, 255);
+  --bgc-light-grey: rgba(230, 242, 245);
   --bgc-grey: rgba(13, 147, 174, 0.163);
   --bgc-dark: #047c94;
-
-  --fc-light: #fcfcee;
-  --fc-dark: #036679;
+  --bgc-gold: gold;
 
   --brdc-light: rgb(255, 255, 255);
   --brdc-semi: #0c4a6e38;
   --brdc-dark: #0c4a6e;
+  
+
+  --fc-light: #fcfcee;
+  --fc-dark: #474a51;
+
+  --some-color: rgba(50,50,93,0.25)
+
+  --ff-main: "Oswald";
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ff-main);
   color: var(--fc-dark);
-  font-size: 1.2rem;
   user-select: none;
 }
 * {
