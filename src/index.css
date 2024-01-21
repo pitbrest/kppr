@@ -3,33 +3,78 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/Oswald/Oswald.ttf") format("opentype");
+}
+
 :root {
-  --bg-color-light: rgb(255, 255, 255);
-  --bg-color-grey: hwb(180 96% 3%);
-  /* --bg-color-grey: #e3e7e9; */
-  --font-color-dark: #434952;
-  --color1: #6a7777;
-  --color2: #d0c8bd;
-  --color3: #cbd0dc;
+  --bgc-light: rgb(255, 255, 255);
+  --bgc-light-grey: rgba(230, 242, 245);
+  --bgc-grey: rgba(13, 147, 174, 0.163);
+  --bgc-dark: #047c94;
+  --bgc-gold: gold;
+
+  --brdc-light: rgb(255, 255, 255);
+  --brdc-semi: #0c4a6e38;
+  --brdc-dark: #0c4a6e;
+  
+
+  --fc-light: #fcfcee;
+  --fc-dark: #474a51;
+
+  --some-color: rgba(50,50,93,0.25)
+
+  --ff-main: "Oswald";
 }
 
 body {
-  font-family: "Sofia Sans", sans-serif;
-  color: var(--font-color-dark);
-  background-color: var(--bg-color-light);
-  font-size: 1.2rem;
+  font-family: var(--ff-main);
+  color: var(--fc-dark);
   user-select: none;
 }
-
-.nav a {
-  padding: 5px;
+* {
+  border-color: var(--brdc-semi);
 }
-@media (min-width: 576px) {
-  .nav {
-    box-shadow: rgba(0, 0, 0, 0.01) 0px -1px 1px 0px inset,
-      rgba(0, 0, 0, 0.02) 0px -2px 2px 0px inset, rgba(0, 0, 0, 0.1) 0px -2px 4px 0px inset,
-      rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.06) 0px 2px 2px,
-      rgba(0, 0, 0, 0.06) 0px 4px 4px, rgba(0, 0, 0, 0.06) 0px 4px 8px,
-      rgba(0, 0, 0, 0.06) 0px 8px 16px;
+
+/* Navigation */
+nav a {
+  line-height: normal;
+}
+nav a:hover:not(.active) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--fc-light);
+  text-underline-offset: 3px;
+  margin-top: 5px;
+}
+nav a li {
+  padding: 5px;
+  border-top: 2px solid transparent !important;
+  border-bottom: 2px solid transparent !important;
+}
+nav a.active li {
+  border-top: 2px solid var(--fc-light) !important;
+  border-bottom: 2px solid var(--fc-light) !important;
+}
+@media (max-width: 768px) {
+  a[aria-current] li {
+    background-color: var(--bgc-grey);
+    font-weight: 600 !important;
+  }
+}
+
+ul.MuiList-root {
+  padding-top: 0;
+}
+
+@media (max-width: 576px) {
+  .MuiList-root {
+    color: var(--fc-dark) !important;
+    font-weight: 500 !important;
+  }
+  .MuiListItemIcon-root {
+    min-width: 35px !important;
+    color: var(--fc-dark) !important;
   }
 }
