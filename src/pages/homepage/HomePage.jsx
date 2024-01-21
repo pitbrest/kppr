@@ -28,11 +28,7 @@ function HomePage() {
           <h3 className="text-center min-[594px]:text-6xl text-5xl font-semibold my-20 pt-3 pb-5 px-2 bg-[--bgc-gold]">
             Наши результаты
           </h3>
-          {/* <CountUpComponent
-            start={10}
-            end={500}
-          /> */}
-          {createResults(resultsData)}
+          <div>{createResults(resultsData)}</div>
         </section>
       </Container>
     </>
