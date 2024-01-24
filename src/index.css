@@ -7,6 +7,10 @@
   font-family: "Oswald";
   src: url("./assets/fonts/Oswald/Oswald.ttf") format("opentype");
 }
+@font-face {
+  font-family: "Prata";
+  src: url("./assets/fonts/Prata/Prata-Regular.ttf") format("opentype");
+}
 
 :root {
   --bgc-light: rgb(255, 255, 255);
@@ -18,18 +22,18 @@
   --brdc-light: rgb(255, 255, 255);
   --brdc-semi: #0c4a6e38;
   --brdc-dark: #0c4a6e;
-  
 
   --fc-light: #fcfcee;
-  --fc-dark: #474a51;
+  --fc-dark: #024553;
 
-  --some-color: rgba(50,50,93,0.25)
+  --some-color: rgba(50, 50, 93, 0.25);
 
-  --ff-main: "Oswald";
+  --ff-first: "Oswald";
+  --ff-second: "Prata";
 }
 
 body {
-  font-family: var(--ff-main);
+  font-family: var(--ff-first);
   color: var(--fc-dark);
   user-select: none;
 }
