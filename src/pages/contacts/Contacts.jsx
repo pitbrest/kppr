@@ -1,5 +1,6 @@
 import "./Contacts.css";
 import { Container } from "../../components/Container";
+import { PageNavigation } from "../../components/page-navigation/PageNavigation";
 import {
   contacts,
   filialsContacts,
@@ -46,18 +47,6 @@ function Contacts() {
                         <a href="mailto:bokppr.@mail.ru"> bokppr.@mail.ru</a>
                       </div>
                     </div>
-                    {/* <div className="py-2">
-                      <div style={{ position: "relative", overflow: "hidden" }}>
-                        <iframe
-                          src="https://yandex.by/map-widget/v1/?ll=23.756325%2C52.109520&mode=search&oid=2808685861&ol=biz&z=17.25"
-                          width="300"
-                          height="200"
-                          allowFullScreen
-                          title="map"
-                          style={{ position: "relative" }}
-                        ></iframe>
-                      </div>
-                    </div> */}
                   </div>
                   <div className="cont py-3">{createContactsItem(contacts)}</div>
                 </div>
@@ -73,18 +62,7 @@ function Contacts() {
           </div>
         </div>
 
-        {screenWidth <= 992 && (
-          <div className="page-navigation flex flex-col gap-2 fixed top-[50vh] right-[1rem] opacity-85">
-            <FaArrowAltCircleUp
-              onClick={() => pageScrollingHandler("top")}
-              size={30}
-            />
-            <FaArrowAltCircleDown
-              onClick={() => pageScrollingHandler("bottom")}
-              size={30}
-            />
-          </div>
-        )}
+        <PageNavigation />
       </Container>
     </section>
   );

@@ -2,6 +2,8 @@ import { IoBarChart } from "react-icons/io5";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsHandThumbsUpFill } from "react-icons/bs";
 
+import { PageNavigation } from "../components/page-navigation/PageNavigation";
+
 import CountUpComponent from "../components/countUp/CountUpComponent";
 import { motion } from "framer-motion";
 
@@ -84,6 +86,7 @@ const createResults = (data) => {
           </div>
         </motion.div>
       ))}
+      <PageNavigation />
     </div>
   );
 };

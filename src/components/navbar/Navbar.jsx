@@ -17,6 +17,9 @@ import { MdLocalAtm } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 
+import { servicesData } from "../../appData/navData";
+import DropDownList from "./DropDownList";
+
 const NavBar = () => {
   const currentIcon = (idx) => {
     if (idx === 0) {
@@ -58,10 +61,10 @@ const NavBar = () => {
         {navItems.map((item, idx) => (
           <NavLink
             to={item.href}
-            key={item.href}
+            key={item.name}
           >
             <ListItem
-              key={idx}
+              key={item}
               disablePadding
             >
               <ListItemButton>
@@ -93,15 +96,23 @@ const NavBar = () => {
       </div>
       <div>
         <ul className="min-[768px]:flex hidden items-center gap-4 text-sm">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.href}
-              to={item.href}
-              className="p-2 nav-item"
-            >
-              <li className="">{item.name.toUpperCase()}</li>
-            </NavLink>
-          ))}
+          {navItems.map((item) =>
+            item.name !== "Деятельность" ? (
+              <NavLink
+                key={item.name}
+                to={item.href}
+                className="main-nav-item p-2 nav-item"
+              >
+                <li>{item.name.toUpperCase()}</li>
+              </NavLink>
+            ) : (
+              <DropDownList
+                listData={servicesData}
+                key={item.name}
+                className="dropDownHeader"
+              />
+            ),
+          )}
         </ul>
       </div>
     </nav>
