@@ -15,7 +15,7 @@
 :root {
   --bgc-light: rgb(255, 255, 255);
   --bgc-light-grey: rgba(230, 242, 245);
-  --bgc-grey: #027c95;
+  --bgc-grey: #ffdd86;
   --bgc-dark: #047c94;
   --bgc-gold: gold;
 
@@ -25,6 +25,7 @@
 
   --fc-light: #fcfcee;
   --fc-dark: #024553;
+  --fc-alt: #c0403b;
 
   --some-color: rgba(50, 50, 93, 0.25);
 
@@ -74,15 +75,15 @@ body {
 ul.MuiList-root {
   padding-top: 0;
 }
+.MuiTypography-root {
+  color: var(--fc-dark) !important;
+  font-weight: 700 !important;
+}
+.MuiListItemIcon-root {
+  min-width: 35px !important;
+  color: var(--fc-alt) !important;
+}
 @media (max-width: 576px) {
-  .MuiList-root {
-    color: var(--fc-dark) !important;
-    font-weight: 500 !important;
-  }
-  .MuiListItemIcon-root {
-    min-width: 35px !important;
-    color: var(--fc-dark) !important;
-  }
 }
 /* header dropdown */
 .dropdown-container {

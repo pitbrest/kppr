@@ -47,10 +47,6 @@
   font-size: calc(16px + 2 * ((100vw - 320px) / (1280 - 320))) !important;
   line-height: 20px;
 }
-
-/* .slogan-wrapper {
-  background: center / contain no-repeat url(../../assets/images/home-bg.jpg);
-} */
 .slogan {
   font-size: calc(14px + 4 * ((100vw - 320px) / (1280 - 320))) !important;
   line-height: calc(14px + 10 * ((100vw - 320px) / (1280 - 320))) !important;

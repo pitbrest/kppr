@@ -13,8 +13,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 // nav icons
 import { RiTeamFill } from "react-icons/ri";
 import { GrServices } from "react-icons/gr";
-import { MdLocalAtm } from "react-icons/md";
-import { IoNewspaperOutline } from "react-icons/io5";
+import { GiNewspaper } from "react-icons/gi";
+import { AiOutlineContacts } from "react-icons/ai";
 import { GrLocation } from "react-icons/gr";
 
 import { servicesData } from "../../appData/navData";
@@ -23,19 +23,19 @@ import DropDownList from "./DropDownList";
 const NavBar = () => {
   const currentIcon = (idx) => {
     if (idx === 0) {
-      return <RiTeamFill />;
+      return <GrServices size={30} />;
     }
     if (idx === 1) {
-      return <GrServices />;
+      return <RiTeamFill size={30} />;
     }
     if (idx === 2) {
-      return <MdLocalAtm />;
+      return <GiNewspaper size={30} />;
     }
     if (idx === 3) {
-      return <IoNewspaperOutline />;
+      return <AiOutlineContacts size={30} />;
     }
     if (idx === 4) {
-      return <GrLocation />;
+      return <GrLocation size={30} />;
     }
   };
 
@@ -58,29 +58,41 @@ const NavBar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {navItems.map((item, idx) => (
-          <NavLink
-            to={item.href}
-            key={item.name}
-          >
+        {navItems.map((item, idx) =>
+          item.name !== "Деятельность" ? (
+            <NavLink
+              to={item.href}
+              key={item.name}
+            >
+              <ListItem
+                key={item}
+                disablePadding
+              >
+                <ListItemButton className="flex gap-3">
+                  <ListItemIcon>{currentIcon(idx)}</ListItemIcon>
+                  <ListItemText primary={item.name} />
+                </ListItemButton>
+              </ListItem>
+            </NavLink>
+          ) : (
             <ListItem
               key={item}
               disablePadding
             >
-              <ListItemButton>
+              <ListItemButton className="flex gap-3">
                 <ListItemIcon>{currentIcon(idx)}</ListItemIcon>
                 <ListItemText primary={item.name} />
               </ListItemButton>
             </ListItem>
-          </NavLink>
-        ))}
+          ),
+        )}
       </List>
     </Box>
   );
 
   return (
     <nav>
-      <div className="min-[768px]:hidden block">
+      <div className="min-[768px]:hidden block font-medium">
         <GiHamburgerMenu
           onClick={toggleDrawer("left", true)}
           size="30"
