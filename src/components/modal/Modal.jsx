@@ -1,27 +1,121 @@
 import "./Modal.css";
-import { useRef } from "react";
+import { NavLink } from "react-router-dom";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { navItems, currentIcon } from "../../appData/navData";
+import { servicesData } from "../../appData/navData";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 
-function Modal({ toggler }) {
+function Modal({ classToggler, isModalOpen, modalToggler }) {
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
+  const dropDownToggler = () => setIsDropDownOpen(!isDropDownOpen);
+
+  const modalRef = useRef(null);
   const modalWrapperRef = useRef(null);
+  const modalContentRef = useRef(null);
+  const dropDownBtnRef = useRef(null);
+
+  const location = useLocation();
+
+  const locationHandler = useCallback(() => {
+    const current = dropDownBtnRef.current;
+    if (location.pathname.includes("activities")) {
+      if (!current.className.includes("active")) current.classList.add("active");
+    } else {
+      if (current.className.includes("active")) current.classList.remove("active");
+    }
+  }, [location.pathname]);
+
+  // изменение isModalOpen
+  const modalHandler = (e) => {
+    modalToggler();
+    if (isDropDownOpen) dropDownToggler();
+  };
+
+  // изменяем статус dropDownBtn для отображения ее текущего состояний
+  useEffect(() => {
+    locationHandler();
+  }, [locationHandler]);
+
+  // изменение isModalOpen при клике на modal-wrapper
+  useEffect(() => {
+    let modalWrapper = modalWrapperRef.current;
+
+    modalWrapper.addEventListener("click", modalHandler);
+    return () => modalWrapper.removeEventListener("click", modalHandler);
+  });
+
+  // открытие/закрытие модального окна при изменении isModalOpen
+  useEffect(() => {
+    classToggler([modalWrapperRef.current, modalContentRef.current], "active");
+  }, [isModalOpen, classToggler]);
 
   return (
-    <div
-      className="modal"
-      ref={modalWrapperRef}
-    >
-      <div className="modal-wrapper">
-        <div className="bg-[--bgc-light] w-[30%] p-10">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, voluptas dolorem unde
-          facilis dolor vitae maiores assumenda sapiente libero atque illum, dolore quia, dolorum
-          quod fuga illo porro tenetur iure?
-          <button
-            className=" block border px-4 py-2 bg-slate-200 mt-10"
-            onClick={() => toggler(modalWrapperRef.current, "active")}
-          >
-            toggle
-          </button>
-        </div>
-      </div>
+    <div ref={modalRef}>
+      <div
+        className="modal-wrapper"
+        ref={modalWrapperRef}
+      ></div>
+      <ul
+        className="modal-content bg-[--bgc-light] px-5 py-10"
+        ref={modalContentRef}
+      >
+        {navItems.map((item, idx) =>
+          item.name !== "Деятельность" ? (
+            <NavLink
+              key={item.name}
+              to={item.href}
+              className="burger-nav-item nav-item flex items-center justify-start gap-1 px-2"
+              onClick={() => {
+                modalHandler();
+              }}
+            >
+              {currentIcon(idx)}
+              <li className="px-5 my-2 font-medium">{item.name.toUpperCase()}</li>
+            </NavLink>
+          ) : (
+            <div
+              className={
+                isDropDownOpen
+                  ? "modalDropdown-container burger-nav-item nav-item px-2 mb-5 bg-slate-100"
+                  : "modalDropdown-container burger-nav-item nav-item px-2"
+              }
+              key={item.name}
+              ref={dropDownBtnRef}
+              onClick={() => dropDownToggler()}
+            >
+              <div className="nav-item flex items-center justify-start gap-1 px-2">
+                {currentIcon(idx)}
+                <div className=" text-base font-medium uppercase flex items-center justify-between w-full">
+                  <p className="px-5 my-2 ">Деятельность</p>
+                  {!isDropDownOpen ? (
+                    <MdKeyboardDoubleArrowDown className="" />
+                  ) : (
+                    <MdOutlineKeyboardDoubleArrowUp />
+                  )}
+                </div>
+              </div>
+              <div className={isDropDownOpen ? "modalDropdown-list my-2 " : "hidden"}>
+                {servicesData.map((item) => (
+                  <NavLink
+                    key={item.name}
+                    to={item.href}
+                    className="burger-nav-item nav-item flex items-center justify-start gap-1 px-2"
+                    onClick={() => {
+                      modalHandler();
+                      dropDownToggler();
+                    }}
+                  >
+                    <li className="px-5 my-2 font-medium">{item.name.toUpperCase()}</li>
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          ),
+        )}
+      </ul>
     </div>
   );
 }

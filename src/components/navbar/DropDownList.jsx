@@ -78,7 +78,7 @@ export default function DropDownList({ listData }) {
             <Grow
               {...TransitionProps}
               style={{
-                transformOrigin: placement === "bottom-start" ? "left top" : "left bottom",
+                transformOrigin: "bottom-start",
                 marginTop: " 10px",
               }}
             >
@@ -89,7 +89,7 @@ export default function DropDownList({ listData }) {
                     id="composition-menu"
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
-                    className="dropdown-container"
+                    className="dropdown-container shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
                   >
                     {listData.map((item) => (
                       <MenuItem
@@ -100,10 +100,9 @@ export default function DropDownList({ listData }) {
                         <NavLink
                           key={item.href}
                           to={item.href}
-                          className="dropdown-item "
+                          className="dropdown-item py-2 px-4 w-full"
                         >
-                          {/* dropdown-list */}
-                          <p className="">{item.name.toUpperCase()}</p>
+                          <p className="text-base">{item.name.toUpperCase()}</p>
                         </NavLink>
                       </MenuItem>
                     ))}

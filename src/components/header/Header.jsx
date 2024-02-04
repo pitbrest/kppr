@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import Navbar from "../navbar/Navbar";
 
-export const Header = () => {
+export const Header = ({ modalToggler }) => {
   return (
     <header className="text-[0.8rem] min-[1920px]:text-[1rem] min-[576px]:py-3 py-1 text-base font-bold bg-[--bgc-dark] text-[--fc-light] overflow-hidden ">
       <Container>
@@ -20,7 +20,7 @@ export const Header = () => {
               alt="logo"
             />
           </Link>
-          <Navbar />
+          <Navbar modalToggler={modalToggler} />
         </div>
       </Container>
     </header>
