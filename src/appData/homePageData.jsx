@@ -22,7 +22,7 @@ const resultsData = [
   {
     advantage: "смонтированных систем пожарной и охранной автоматики",
     start: 99,
-    end: 326,
+    end: 1284,
     duration: 3.5,
   },
   {
