@@ -16,7 +16,7 @@
   width: max(40vw, 240px);
   position: absolute;
   top: 0;
-  left: -800px;
+  left: -1000px;
   transition: left 1500ms;
   z-index: 12;
   font-family: var(--ff-first);
@@ -26,7 +26,7 @@
   left: 0px;
   transition: left 500ms;
 }
-.burger-nav-item:not(:last-child) {
+.modal-wrapper .burger-nav-item:not(:last-child) {
   border-bottom: 1px solid var(--brdc-semi);
 }
 .burger-nav-item.active {
@@ -36,4 +36,7 @@
   color: var(--fc-dark) !important;
   font-family: var(--ff-first);
   font-size: 16px;
+}
+.nav-item svg:first-child {
+  margin-left: 0.5rem;
 }

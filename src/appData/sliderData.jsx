@@ -1,4 +1,3 @@
-import AllDir from "../assets/images/slider/all-directions.jpg";
 import Plan from "../assets/images/slider/plan-evak.jpeg";
 import Equipments from "../assets/images/slider/equipments.jpeg";
 import Ognetushiteli from "../assets/images/slider/ognetushiteli.jpg";

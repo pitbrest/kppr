@@ -6,6 +6,7 @@ import { navItems, currentIcon } from "../../appData/navData";
 import { servicesData } from "../../appData/navData";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { MdCircle } from "react-icons/md";
 
 function Modal({ classToggler, isModalOpen, modalToggler }) {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
@@ -67,37 +68,37 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
             <NavLink
               key={item.name}
               to={item.href}
-              className="burger-nav-item nav-item flex items-center justify-start gap-1 px-2"
+              className="burger-nav-item nav-item flex items-center justify-start gap-1"
               onClick={() => {
                 modalHandler();
               }}
             >
               {currentIcon(idx)}
-              <li className="px-5 my-2 font-medium">{item.name.toUpperCase()}</li>
+              <li className="px-3 my-2 font-medium">{item.name.toUpperCase()}</li>
             </NavLink>
           ) : (
             <div
               className={
                 isDropDownOpen
-                  ? "modalDropdown-container burger-nav-item nav-item px-2 mb-5 bg-slate-100"
-                  : "modalDropdown-container burger-nav-item nav-item px-2"
+                  ? "modalDropdown-container burger-nav-item nav-item mb-5 bg-slate-100"
+                  : "modalDropdown-container burger-nav-item nav-item"
               }
               key={item.name}
               ref={dropDownBtnRef}
               onClick={() => dropDownToggler()}
             >
-              <div className="nav-item flex items-center justify-start gap-1 px-2">
+              <div className="nav-item flex items-center justify-start gap-1">
                 {currentIcon(idx)}
-                <div className=" text-base font-medium uppercase flex items-center justify-between w-full">
-                  <p className="px-5 my-2 ">Деятельность</p>
+                <div className=" text-base font-medium uppercase flex items-center">
+                  <p className="px-3 my-2 ">Деятельность</p>
                   {!isDropDownOpen ? (
-                    <MdKeyboardDoubleArrowDown className="" />
+                    <MdKeyboardDoubleArrowDown className="mr-1" />
                   ) : (
                     <MdOutlineKeyboardDoubleArrowUp />
                   )}
                 </div>
               </div>
-              <div className={isDropDownOpen ? "modalDropdown-list my-2 " : "hidden"}>
+              <div className={isDropDownOpen ? "modalDropdown-list my-2" : "hidden"}>
                 {servicesData.map((item) => (
                   <NavLink
                     key={item.name}
@@ -108,7 +109,8 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
                       dropDownToggler();
                     }}
                   >
-                    <li className="px-5 my-2 font-medium">{item.name.toUpperCase()}</li>
+                    <MdCircle size={10} />
+                    <li className="ps-1 my-2 font-medium">{item.name.toUpperCase()}</li>
                   </NavLink>
                 ))}
               </div>

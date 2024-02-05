@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { navItems } from "../../appData/navData";
-// burger icon
-import { GiHamburgerMenu } from "react-icons/gi";
-
 import { servicesData } from "../../appData/navData";
-import DropDownList from "./DropDownList";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import "./Navbar.css";
 
 const NavBar = ({ modalToggler }) => {
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
+  const dropDownToggler = () => setIsDropDownOpen(!isDropDownOpen);
   return (
     <nav>
       <div className="min-[768px]:hidden block font-medium">
@@ -17,7 +21,7 @@ const NavBar = ({ modalToggler }) => {
         />
       </div>
       <div>
-        <ul className="min-[768px]:flex hidden items-center gap-4 text-sm">
+        <ul className="min-[768px]:flex hidden items-center gap-4 text-sm font-medium">
           {navItems.map((item) =>
             item.name !== "Деятельность" ? (
               <NavLink
@@ -28,11 +32,37 @@ const NavBar = ({ modalToggler }) => {
                 <li>{item.name.toUpperCase()}</li>
               </NavLink>
             ) : (
-              <DropDownList
-                listData={servicesData}
+              <div
                 key={item.name}
-                className="dropDownHeader"
-              />
+                onClick={() => dropDownToggler()}
+              >
+                <div className="nav-item flex">
+                  <div className="font-medium uppercase flex items-center">
+                    <p className="pr-1 my-2 font-medium">Деятельность</p>
+                    {!isDropDownOpen ? (
+                      <MdKeyboardDoubleArrowDown />
+                    ) : (
+                      <MdOutlineKeyboardDoubleArrowUp />
+                    )}
+                  </div>
+                </div>
+                <div className="absolute top-[77px] z-100 w-40 h-auto bg-[var(--bgc-dark)]">
+                  <div>
+                    {servicesData.map((item) => (
+                      <NavLink
+                        key={item.name}
+                        to={item.href}
+                        className="burger-nav-item nav-item flex items-center justify-start gap-1 px-2"
+                        onClick={() => {
+                          dropDownToggler();
+                        }}
+                      >
+                        <li className="px-5 my-2 font-medium">{item.name.toUpperCase()}</li>
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
+              </div>
             ),
           )}
         </ul>
