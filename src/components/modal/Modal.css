@@ -1,16 +1,19 @@
 .modal-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 0 !important;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh !important;
+  background-color: rgb(81 90 91 / 67%);
   z-index: 11;
   transition: width 0ms 450ms;
 }
 .modal-wrapper.active {
   width: 100vw !important;
   transition: width 0ms;
+  height: 100vh !important;
 }
 .modal-content {
   width: max(40vw, 240px);

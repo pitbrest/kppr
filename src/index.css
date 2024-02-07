@@ -24,7 +24,7 @@
   --brdc-dark: #0c4a6e;
 
   --fc-light: #fcfcee;
-  --fc-dark: #024553;
+  --fc-dark: #1e4b74;
   --fc-alt: #c0000a;
 
   --some-color: rgba(50, 50, 93, 0.25);
@@ -42,4 +42,21 @@ body {
 
 * {
   border-color: var(--brdc-semi);
+}
+a {
+  cursor: pointer;
+  font-weight: 500;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.about {
+  text-indent: 25px;
+  text-align: justify;
+}
+h5 {
+  font-size: calc(28px + 4 * ((100vw - 320px) / (1280 - 320))) !important;
+  line-height: 30px !important;
+  padding-bottom: 30px !important;
 }

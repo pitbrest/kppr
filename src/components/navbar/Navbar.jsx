@@ -5,12 +5,14 @@ import { servicesData } from "../../appData/navData";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { MdCircle } from "react-icons/md";
 import "./Navbar.css";
 
 const NavBar = ({ modalToggler }) => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
   const dropDownToggler = () => setIsDropDownOpen(!isDropDownOpen);
+
   return (
     <nav>
       <div className="min-[768px]:hidden block font-medium">
@@ -40,27 +42,33 @@ const NavBar = ({ modalToggler }) => {
                   <div className="font-medium uppercase flex items-center">
                     <p className="pr-1 my-2 font-medium">Деятельность</p>
                     {!isDropDownOpen ? (
-                      <MdKeyboardDoubleArrowDown />
+                      <MdKeyboardDoubleArrowDown size={15} />
                     ) : (
-                      <MdOutlineKeyboardDoubleArrowUp />
+                      <MdOutlineKeyboardDoubleArrowUp size={15} />
                     )}
                   </div>
                 </div>
-                <div className="absolute top-[77px] z-100 w-40 h-auto bg-[var(--bgc-dark)]">
-                  <div>
-                    {servicesData.map((item) => (
-                      <NavLink
-                        key={item.name}
-                        to={item.href}
-                        className="burger-nav-item nav-item flex items-center justify-start gap-1 px-2"
-                        onClick={() => {
-                          dropDownToggler();
-                        }}
-                      >
-                        <li className="px-5 my-2 font-medium">{item.name.toUpperCase()}</li>
-                      </NavLink>
-                    ))}
-                  </div>
+
+                <div
+                  className={
+                    isDropDownOpen
+                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)] active shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+                      : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)]"
+                  }
+                >
+                  {servicesData.map((item) => (
+                    <NavLink
+                      key={item.name}
+                      to={item.href}
+                      className="dropdown-item flex items-center justify-start gap-1 px-2 py-1"
+                      onClick={() => {
+                        dropDownToggler();
+                      }}
+                    >
+                      <MdCircle size={10} />
+                      <li className="px-2 my-2">{item.name.toUpperCase()}</li>
+                    </NavLink>
+                  ))}
                 </div>
               </div>
             ),

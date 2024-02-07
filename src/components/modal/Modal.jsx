@@ -54,7 +54,10 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
   }, [isModalOpen, classToggler]);
 
   return (
-    <div ref={modalRef}>
+    <div
+      ref={modalRef}
+      className="modal"
+    >
       <div
         className="modal-wrapper"
         ref={modalWrapperRef}
