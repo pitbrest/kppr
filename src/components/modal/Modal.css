@@ -5,7 +5,7 @@
   right: 0;
   bottom: 0;
   width: 0 !important;
-  height: 100vh !important;
+  height: 0 !important;
   background-color: rgb(81 90 91 / 67%);
   z-index: 11;
   transition: width 0ms 450ms;

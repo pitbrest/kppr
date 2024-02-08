@@ -6,12 +6,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 import { MdCircle } from "react-icons/md";
+import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const NavBar = ({ modalToggler }) => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
   const dropDownToggler = () => setIsDropDownOpen(!isDropDownOpen);
+
+  const checkLocation = useLocation().pathname.includes("activities");
 
   return (
     <nav>
@@ -30,11 +33,15 @@ const NavBar = ({ modalToggler }) => {
                 key={item.name}
                 to={item.href}
                 className="main-nav-item p-2 nav-item"
+                onClick={() => (isDropDownOpen ? dropDownToggler() : null)}
               >
                 <li>{item.name.toUpperCase()}</li>
               </NavLink>
             ) : (
               <div
+                className={
+                  checkLocation ? "dropDown cursor-pointer active" : "dropDown cursor-pointer"
+                }
                 key={item.name}
                 onClick={() => dropDownToggler()}
               >

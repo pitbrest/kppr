@@ -47,16 +47,18 @@ a {
   cursor: pointer;
   font-weight: 500;
 }
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.about {
-  text-indent: 25px;
-  text-align: justify;
-}
+
 h5 {
   font-size: calc(28px + 4 * ((100vw - 320px) / (1280 - 320))) !important;
   line-height: 30px !important;
-  padding-bottom: 30px !important;
+  /* color: #b7350e; */
+}
+
+/* About */
+.about {
+  /* text-indent: 25px; */
+  text-align: justify;
+}
+.about a:hover {
+  text-decoration: underline;
 }
