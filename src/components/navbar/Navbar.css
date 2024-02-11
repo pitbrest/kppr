@@ -14,6 +14,7 @@
   transform-origin: top;
   transform: rotateX(90deg);
   transition: all 0.2s ease-out;
+  /* border: 2px solid var(--fc-light); */
 }
 .dropdown-container.active {
   transform-origin: top;
@@ -24,8 +25,9 @@
   letter-spacing: 1.2px;
   font-weight: 700;
 }
-
 .dropdown-item.active {
-  background-color: rgb(208 218 228);
-  color: var(--fc-dark);
+  background-color: #05a6c6;
+}
+.dropdown-container a:first-child {
+  border-bottom: 2px solid var(--fc-light) !important;
 }

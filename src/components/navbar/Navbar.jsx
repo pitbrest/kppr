@@ -5,7 +5,7 @@ import { servicesData } from "../../appData/navData";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
-import { MdCircle } from "react-icons/md";
+
 import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 
@@ -59,7 +59,7 @@ const NavBar = ({ modalToggler }) => {
                 <div
                   className={
                     isDropDownOpen
-                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)] active shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]"
+                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)] active "
                       : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)]"
                   }
                 >
@@ -72,7 +72,6 @@ const NavBar = ({ modalToggler }) => {
                         dropDownToggler();
                       }}
                     >
-                      <MdCircle size={10} />
                       <li className="px-2 my-2">{item.name.toUpperCase()}</li>
                     </NavLink>
                   ))}

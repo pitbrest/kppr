@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply text-neutral-800;
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
+}
+
 @font-face {
   font-family: "Oswald";
   src: url("./assets/fonts/Oswald/Oswald.ttf") format("opentype");
@@ -16,18 +26,18 @@
   --bgc-light: rgb(255, 255, 255);
   --bgc-light-grey: rgba(230, 242, 245);
   --bgc-grey: #ffdd86;
-  --bgc-dark: #047c94;
+  --bgc-dark: #04667a;
   --bgc-gold: gold;
 
   --brdc-light: rgb(255, 255, 255);
-  --brdc-semi: #0c4a6e38;
+  --brdc-semi: #5e6d7a;
   --brdc-dark: #0c4a6e;
 
   --fc-light: #fcfcee;
-  --fc-dark: #1e4b74;
+  --fc-dark: #474a51;
   --fc-alt: #c0000a;
 
-  --some-color: rgba(50, 50, 93, 0.25);
+  --color-active: #05a6c6;
 
   --ff-first: "Oswald";
   --ff-second: "Prata";
