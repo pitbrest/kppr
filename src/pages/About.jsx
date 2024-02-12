@@ -1,5 +1,5 @@
 import { Container } from "../components/Container";
-import Button from "../components/button/Button";
+import Button from "../components/Button";
 import { PageNavigation } from "../components/page-navigation/PageNavigation";
 import { GiPlainCircle } from "react-icons/gi";
 

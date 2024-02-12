@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { navItems } from "../../appData/navData";
 import { servicesData } from "../../appData/navData";
@@ -9,11 +8,7 @@ import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 
-const NavBar = ({ modalToggler }) => {
-  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-
-  const dropDownToggler = () => setIsDropDownOpen(!isDropDownOpen);
-
+const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
   const checkLocation = useLocation().pathname.includes("activities");
 
   return (
@@ -59,8 +54,8 @@ const NavBar = ({ modalToggler }) => {
                 <div
                   className={
                     isDropDownOpen
-                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)] active "
-                      : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)]"
+                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)] z-10 active "
+                      : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)] z-10"
                   }
                 >
                   {servicesData.map((item) => (
