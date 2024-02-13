@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { TECollapse } from "tw-elements-react";
 import { Container } from "../../components/Container";
-import Ognet from "../../assets/images/commerce/ognetushiteli.png";
-import Shkaf from "../../assets/images/commerce/pog-shkaf.png";
+import { commerceData } from "../../appData/commerceData";
 
 import "./Commerce.css";
 
@@ -32,7 +31,7 @@ function Commerce() {
               <button
                 className={`${
                   activeElement === "element1" && `underline underline-offset-2 deco`
-                } font-bold text-lg group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left transition [overflow-anchor:none] hover:z-[2]`}
+                } font-bold text-xl group relative flex w-full items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left transition [overflow-anchor:none] hover:z-[2]`}
                 type="button"
                 onClick={() => handleClick("element1")}
                 aria-expanded="true"
@@ -50,7 +49,7 @@ function Commerce() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    strokeWidth="1.5"
+                    strokeWidth="3"
                     stroke="currentColor"
                     className="h-6 w-6"
                   >
@@ -68,6 +67,20 @@ function Commerce() {
               className="!mt-0 !rounded-b-none"
             >
               <div className="commerce p-4">
+                {commerceData.map((item) => (
+                  <div className="px-5 py-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex flex-col gap-2 justify-start items-center rounded-md border border-[#d1d1d1]">
+                    <img
+                      className="max-w-40 basis-2/3 object-center h-2/3 hover:scale-105"
+                      src={item.img}
+                      alt=""
+                    />
+                    <h6 className="font-medium text-center flex items-center basis-1/3">
+                      {item.title}
+                    </h6>
+                  </div>
+                ))}
+              </div>
+              {/* <div className="commerce p-4">
                 <div className="px-5 py-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex flex-col gap-2 justify-start items-center rounded-md">
                   <img
                     className="max-w-40 basis-2/3 object-cover h-2/3"
@@ -86,7 +99,7 @@ function Commerce() {
                   />
                   <h6 className="text-center flex items-center basis-1/3">Пожарные шкафы</h6>
                 </div>
-              </div>
+              </div> */}
             </TECollapse>
           </div>
         </div>
