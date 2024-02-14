@@ -23,7 +23,25 @@ function Commerce() {
           id="accordionExample"
           className="max-w-7xl mx-auto text-[--fc-dark]"
         >
-          <div className="rounded-md border-2 border-[light-grey] mb-10">
+          <div className="text-base mb-10 leading-7">
+            <p>
+              Реализуем первичные средства пожаротушения, оборудование и сопутствующие товары
+              противопожарной тематики. Широкий спектр представленных товаров поможет Вам оснастить
+              здания и сооружения любого характера в соответствии с правилами пожарной безопасности.
+            </p>
+            <p>
+              Заказать и приобрести товары можно в нашем
+              <a
+                href="/contacts"
+                className="font-bold text-red-700"
+              >
+                {" "}
+                магазине 101{" "}
+              </a>
+              в г.Бресте, а также обратившись в нашу региональную сеть.
+            </p>
+          </div>
+          <div className="rounded-md border-2 border-[#bebebe] mb-10">
             <h2
               className="mb-0"
               id="headingOne"
@@ -37,7 +55,7 @@ function Commerce() {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                Первичные средства пожаротушения
+                Первичные средства пожаротушения и сопутствующие товары
                 <span
                   className={`${
                     activeElement === "element1"
@@ -66,7 +84,7 @@ function Commerce() {
               show={activeElement === "element1"}
               className="!mt-0 !rounded-b-none"
             >
-              <div className="commerce p-4">
+              <div className="commerce1 p-4">
                 {commerceData1.map((item) => (
                   <div className="commerce-item px-5 py-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex flex-col gap-2 justify-start items-center rounded-md border border-[#d1d1d1]">
                     <img
@@ -83,14 +101,14 @@ function Commerce() {
             </TECollapse>
           </div>
 
-          <div className="rounded-md border-2 border-[light-grey] mb-10">
+          <div className="rounded-md border-2 border-[#bebebe] mb-10">
             <h2
               className="mb-0"
               id="headingOne"
             >
               <button
                 className={`${
-                  activeElement === "element1" && `underline underline-offset-2 deco`
+                  activeElement === "element2" && `underline underline-offset-2 deco`
                 } font-bold text-xl group relative flex w-full items-center rounded-t-[15px] border-0 px-5 py-4 text-left transition [overflow-anchor:none] hover:z-[2]`}
                 type="button"
                 onClick={() => handleClick("element2")}
@@ -126,9 +144,9 @@ function Commerce() {
               show={activeElement === "element2"}
               className="!mt-0 !rounded-b-none"
             >
-              <div className="commerce p-4">
+              <div className="commerce2 p-4">
                 {commerceData2.map((item) => (
-                  <div className="commerce-item px-5 py-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex flex-col gap-2 justify-start items-center rounded-md border border-[#d1d1d1]">
+                  <div className="commerce-item px-5 py-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex flex-col gap-2 justify-start items-center rounded-md border border-[#d1d1d1] h-[190px]">
                     <img
                       className="max-w-40 basis-2/3 object-center h-2/3"
                       src={item.img}

@@ -8,7 +8,10 @@ import Aptechka from "../assets/images/commerce/aptechka.png";
 import Protivogaz from "../assets/images/commerce/protivogaz.png";
 import Dveri from "../assets/images/commerce/dveri.jpg";
 import Molniepriemnik from "../assets/images/commerce/molniepriemnik.png";
-import Polosa from "../assets/images/commerce/polosa.png";
+import Provodnik from "../assets/images/commerce/provodnik.png";
+import Derzhateli from "../assets/images/commerce/derzhateli.png";
+import Zazhimi from "../assets/images/commerce/zazhimi.png";
+import Komplekti from "../assets/images/commerce/komplekti.png";
 
 const commerceData1 = [
   { title: `Огнетушители \n и сопутствующие товары`, img: Ognetushiteli },
@@ -38,7 +41,10 @@ const commerceData1 = [
 ];
 const commerceData2 = [
   { title: `Молниеприемники`, img: Molniepriemnik },
-  { title: `Проводники и токоотводы`, img: Polosa },
+  { title: `Проводники и токоотводы`, img: Provodnik },
+  { title: `Держатели проводника`, img: Derzhateli },
+  { title: `Зажимы проводника`, img: Zazhimi },
+  { title: `Комплекты для заземления и вспомогательные материалы`, img: Komplekti },
 ];
 
 export { commerceData1, commerceData2 };
