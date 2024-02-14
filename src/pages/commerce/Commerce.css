@@ -4,6 +4,12 @@
   gap: 1rem;
   white-space: pre-line;
 }
+.commerce-item:hover {
+  background-color: rgb(230, 237, 237);
+}
+.commerce-item:hover img {
+  scale: 1.05;
+}
 @media (max-width: 1024px) {
   .commerce {
     grid-template-columns: repeat(3, 1fr);

@@ -7,7 +7,10 @@ import Znaki from "../assets/images/commerce/znaki-tablichki.png";
 import Aptechka from "../assets/images/commerce/aptechka.png";
 import Protivogaz from "../assets/images/commerce/protivogaz.png";
 import Dveri from "../assets/images/commerce/dveri.jpg";
-const commerceData = [
+import Molniepriemnik from "../assets/images/commerce/molniepriemnik.png";
+import Polosa from "../assets/images/commerce/polosa.png";
+
+const commerceData1 = [
   { title: `Огнетушители \n и сопутствующие товары`, img: Ognetushiteli },
   { title: "Пожарные шкафы \n и их наполнение", img: PogarniyShkaf },
   { title: "Пожарные щиты, ящики и инвентарь", img: PogarniySchit },
@@ -33,5 +36,9 @@ const commerceData = [
     img: Dveri,
   },
 ];
+const commerceData2 = [
+  { title: `Молниеприемники`, img: Molniepriemnik },
+  { title: `Проводники и токоотводы`, img: Polosa },
+];
 
-export { commerceData };
+export { commerceData1, commerceData2 };
