@@ -1,0 +1,42 @@
+/* .commerce1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  white-space: pre-line;
+} */
+.commerce1,
+.commerce2,
+.commerce3 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  white-space: pre-line;
+}
+.commerce-item:hover {
+  background-color: rgb(239, 241, 241);
+}
+.commerce-item img {
+  transition: scale linear 0.2s;
+}
+.commerce-item:hover img {
+  scale: 1.1;
+  transition: scale linear 0.2s;
+}
+@media (max-width: 1024px) {
+  .commerce1,
+  .commerce2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .commerce1,
+  .commerce2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .commerce1,
+  .commerce2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

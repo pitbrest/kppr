@@ -1,0 +1,45 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0 !important;
+  height: 0 !important;
+  background-color: rgb(81 90 91 / 67%);
+  z-index: 11;
+  transition: width 0ms 450ms;
+}
+.modal-wrapper.active {
+  width: 100vw !important;
+  transition: width 0ms;
+  height: 100vh !important;
+}
+.modal-content {
+  width: max(40vw, 240px);
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  transition: left 1500ms;
+  z-index: 12;
+  font-family: var(--ff-first);
+  color: var(--fc-dark) !important;
+}
+.modal-content.active {
+  left: 0px;
+  transition: left 500ms;
+}
+.modal-wrapper .burger-nav-item:not(:last-child) {
+  border-bottom: 1px solid var(--brdc-semi);
+}
+.burger-nav-item.active {
+  background-color: rgb(208 218 228);
+}
+.modal-content button {
+  color: var(--fc-dark) !important;
+  font-family: var(--ff-first);
+  font-size: 16px;
+}
+.nav-item svg:first-child {
+  margin-left: 0.5rem;
+}

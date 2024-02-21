@@ -2,10 +2,6 @@ import React from "react";
 import CountUp from "react-countup";
 
 function CountUpComponent({ start, end, duration }) {
-  const handler = () => {
-    document.addEventListener();
-  };
-
   return (
     <CountUp
       start={start}

@@ -19,11 +19,11 @@ function App() {
           element={<About />}
         />
         <Route
-          path="services"
+          path="activities/services"
           element={<Services />}
         />
         <Route
-          path="commerce"
+          path="activities/commerce"
           element={<Commerce />}
         />
         <Route

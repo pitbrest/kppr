@@ -7,74 +7,60 @@
   font-family: "Oswald";
   src: url("./assets/fonts/Oswald/Oswald.ttf") format("opentype");
 }
+@font-face {
+  font-family: "Prata";
+  src: url("./assets/fonts/Prata/Prata-Regular.ttf") format("opentype");
+}
 
 :root {
   --bgc-light: rgb(255, 255, 255);
-  --bgc-light-grey: rgba(230, 242, 245);
-  --bgc-grey: rgba(13, 147, 174, 0.163);
-  --bgc-dark: #047c94;
+  --bgc-light-grey: #edf1f1;
+
+  --bgc-dark: #04667a;
   --bgc-gold: gold;
+  --bgc-grey: #ffdd86;
+  --bgc-red: #b2494f;
 
   --brdc-light: rgb(255, 255, 255);
-  --brdc-semi: #0c4a6e38;
+  --brdc-semi: #5e6d7a;
   --brdc-dark: #0c4a6e;
-  
 
   --fc-light: #fcfcee;
   --fc-dark: #474a51;
+  --fc-alt: #b2494f;
 
-  --some-color: rgba(50,50,93,0.25)
+  --color-active: #05a6c6;
 
-  --ff-main: "Oswald";
+  --ff-first: "Oswald";
+  --ff-second: "Prata";
 }
 
 body {
-  font-family: var(--ff-main);
+  font-family: var(--ff-first);
   color: var(--fc-dark);
   user-select: none;
+  /* background: center / auto repeat url(./assets/images/bg-fill.jpg); */
 }
+
 * {
   border-color: var(--brdc-semi);
 }
-
-/* Navigation */
-nav a {
-  line-height: normal;
+a {
+  cursor: pointer;
+  font-weight: 500;
 }
-nav a:hover:not(.active) {
+
+h5 {
+  font-size: calc(28px + 4 * ((100vw - 320px) / (1280 - 320))) !important;
+  line-height: 30px !important;
+  /* color: #b7350e; */
+}
+
+/* About */
+.about {
+  /* text-indent: 25px; */
+  text-align: justify;
+}
+.about a:hover {
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: var(--fc-light);
-  text-underline-offset: 3px;
-  margin-top: 5px;
-}
-nav a li {
-  padding: 5px;
-  border-top: 2px solid transparent !important;
-  border-bottom: 2px solid transparent !important;
-}
-nav a.active li {
-  border-top: 2px solid var(--fc-light) !important;
-  border-bottom: 2px solid var(--fc-light) !important;
-}
-@media (max-width: 768px) {
-  a[aria-current] li {
-    background-color: var(--bgc-grey);
-    font-weight: 600 !important;
-  }
-}
-
-ul.MuiList-root {
-  padding-top: 0;
-}
-
-@media (max-width: 576px) {
-  .MuiList-root {
-    color: var(--fc-dark) !important;
-    font-weight: 500 !important;
-  }
-  .MuiListItemIcon-root {
-    min-width: 35px !important;
-    color: var(--fc-dark) !important;
-  }
 }
