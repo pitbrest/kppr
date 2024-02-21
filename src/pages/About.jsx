@@ -7,7 +7,9 @@ function About() {
   return (
     <Container>
       <div className="about-wrapper about px-5 bg-opacity-80 max-w-5xl mx-auto">
-        <h5 className="font-extrabold uppercase pb-10 text-center">О предприятии</h5>
+        <h5 className="font-extrabold uppercase py-4 text-center bg-[--bgc-red] text-[--fc-light]">
+          О предприятии
+        </h5>
         <p>
           <b>
             Унитарное предприятие "Брестский областной комбинат противопожарных работ" РГОО "БДПО"

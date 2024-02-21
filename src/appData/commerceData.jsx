@@ -12,6 +12,8 @@ import Provodnik from "../assets/images/commerce/provodnik.png";
 import Derzhateli from "../assets/images/commerce/derzhateli.png";
 import Zazhimi from "../assets/images/commerce/zazhimi.png";
 import Komplekti from "../assets/images/commerce/komplekti.png";
+import Bobs from "../assets/images/commerce/bobs.png";
+import KMD_O_M from "../assets/images/commerce/kmd-o-m.png";
 
 const commerceData1 = [
   { title: `Огнетушители \n и сопутствующие товары`, img: Ognetushiteli },
@@ -46,5 +48,9 @@ const commerceData2 = [
   { title: `Зажимы проводника`, img: Zazhimi },
   { title: `Комплекты для заземления и вспомогательные материалы`, img: Komplekti },
 ];
+const commerceData3 = [
+  { title: `Огнебиозащитный состав \n для древесины "БОБС`, img: Bobs },
+  { title: `Огнезащитный состав для м/к КМД-О-Металл`, img: KMD_O_M },
+];
 
-export { commerceData1, commerceData2 };
+export { commerceData1, commerceData2, commerceData3 };

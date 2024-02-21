@@ -14,10 +14,12 @@
 
 :root {
   --bgc-light: rgb(255, 255, 255);
-  --bgc-light-grey: rgba(230, 242, 245);
-  --bgc-grey: #ffdd86;
+  --bgc-light-grey: #edf1f1;
+
   --bgc-dark: #04667a;
   --bgc-gold: gold;
+  --bgc-grey: #ffdd86;
+  --bgc-red: #b2494f;
 
   --brdc-light: rgb(255, 255, 255);
   --brdc-semi: #5e6d7a;
@@ -25,7 +27,7 @@
 
   --fc-light: #fcfcee;
   --fc-dark: #474a51;
-  --fc-alt: #c0000a;
+  --fc-alt: #b2494f;
 
   --color-active: #05a6c6;
 
