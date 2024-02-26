@@ -7,8 +7,8 @@
 
 .main-nav-item.active,
 .dropDown.cursor-pointer.active {
-  border-top: 3px solid var(--fc-light);
-  border-bottom: 3px solid var(--fc-light);
+  border-top: 3px solid var(--fc-dark);
+  border-bottom: 3px solid var(--fc-dark);
 }
 .dropdown-container {
   transform-origin: top;
@@ -26,7 +26,7 @@
   font-weight: 700;
 }
 .dropdown-item.active {
-  background-color: #05a6c6;
+  background-color: var(--bgc-light);
 }
 .dropdown-container a:first-child {
   border-bottom: 2px solid var(--fc-light) !important;
