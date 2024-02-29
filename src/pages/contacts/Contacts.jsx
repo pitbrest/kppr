@@ -16,7 +16,7 @@ function Contacts() {
         <div className="">
           <div className="info-wrapper flex items-start justify-start flex-wrap text-sm">
             <div className="w-full">
-              <div className="w-full bg-[#b2494f] text-[--fc-light] flex items-center">
+              <div className="w-full bg-[--color-dark-grey] text-[--color-light] flex items-center">
                 <h3 className="text-sm min-[576px]:text-lg font-extrabold py-2 min-[576px]:py-4 ps-6">
                   Головное предприятие в г.Бресте
                 </h3>
@@ -48,7 +48,7 @@ function Contacts() {
                 <hr className="my-2" />
               </div>
               <div className="w-full">
-                <h3 className="text-sm min-[576px]:text-lg font-extrabold py-2 min-[576px]:py-4 ps-6 mb-3 bg-[#b2494f] text-[--fc-light] flex items-center hyphens-auto">
+                <h3 className="text-sm min-[576px]:text-lg font-extrabold py-2 min-[576px]:py-4 ps-6 mb-3 bg-[--color-dark-grey] text-[--color-light] flex items-center hyphens-auto">
                   Производственные участки в &shy; районных центрах &shy; Брестской области
                 </h3>
                 <div className="filials-container">{createFilialContactsItem(filialsContacts)}</div>

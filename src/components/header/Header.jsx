@@ -10,7 +10,7 @@ export const Header = ({ modalToggler }) => {
   const dropDownToggler = () => setIsDropDownOpen(!isDropDownOpen);
 
   return (
-    <header className="text-[0.8rem] min-[1920px]:text-[1rem] min-[576px]:py-3 py-1 text-base font-bold text-[--fc-dark] overflow-hidden bg-[--bgc-light]">
+    <header className="text-[0.8rem] min-[1920px]:text-[1rem] min-[576px]:py-3 py-1 text-base font-bold text-[--color-light] overflow-hidden bg-[--color-teal]">
       <Container>
         <div className="flex justify-between items-center">
           <Link

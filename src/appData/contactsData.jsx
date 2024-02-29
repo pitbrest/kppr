@@ -220,7 +220,7 @@ const createContactsItem = (data) => {
     return (
       <div
         key={item.numbers}
-        className="border p-2"
+        className="border rounded-sm p-3"
       >
         <p className="font-extrabold">{call}</p>
         <div className="main-contacts">
@@ -249,7 +249,7 @@ const createFilialContactsItem = (data) => {
     return (
       <div
         key={item.city}
-        className="flex flex-col min-[5px]:flex-row min-[576px] justify-between border p-2"
+        className="flex flex-col min-[5px]:flex-row min-[576px] justify-between border rounded-sm p-3"
       >
         <div className="">
           <a

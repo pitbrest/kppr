@@ -9,6 +9,7 @@
   background-color: rgb(81 90 91 / 67%);
   z-index: 11;
   transition: width 0ms 450ms;
+  font-weight: 700 !important;
 }
 .modal-wrapper.active {
   width: 100vw !important;
@@ -33,7 +34,7 @@
   border-bottom: 1px solid var(--brdc-semi);
 }
 .burger-nav-item.active {
-  background-color: rgb(208 218 228);
+  background-color: #c6c6c6;
 }
 .modal-content button {
   color: var(--fc-dark) !important;

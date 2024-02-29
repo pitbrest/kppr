@@ -9,26 +9,23 @@
 }
 
 :root {
-  --bgc-light: #ece8e4;
-  --bgc-dark: #b09f93;
+  --color-light: #f0f0f0;
+  --color-dark: #282727;
+  --color-grey: #a7a7a7;
+  --color-teal: #008794;
+  --color-dark-grey: #757778;
 
-  --fc-light: #f8f3ec;
-  --fc-dark: #564535;
-
-  --color-1: #ded8d8;
-  --color-2: #a39f9b;
-
-  --ff-first: "Oswald";
+  --ff-main: "Oswald";
 }
 
 body {
-  font-family: var(--ff-first);
-  color: var(--fc-dark);
+  font-family: var(--ff-main);
+  color: var(--color-dark);
   user-select: none;
 }
 
 * {
-  border-color: var(--brdc-semi);
+  border-color: var(--color-grey);
 }
 a {
   cursor: pointer;
@@ -38,12 +35,10 @@ a {
 h5 {
   font-size: calc(28px + 4 * ((100vw - 320px) / (1280 - 320))) !important;
   line-height: 30px !important;
-  /* color: #b7350e; */
 }
 
 /* About */
 .about {
-  /* text-indent: 25px; */
   text-align: justify;
 }
 .about a:hover {

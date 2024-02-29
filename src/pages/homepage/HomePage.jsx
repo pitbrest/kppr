@@ -1,6 +1,7 @@
 import "./HomePage.css";
 import { Container } from "../../components/Container";
-import MainImg from "../../assets/images/home-bg.jpg";
+import HomepageBg from "../../assets/images/homepage-bg.png";
+import Main from "../../assets/images/1.png";
 
 import { motion } from "framer-motion";
 
@@ -20,13 +21,10 @@ function HomePage() {
       <Container>
         <section className="flex flex-col justify-start items-center mb-60">
           <img
-            className="w-auto max-h-[60%]"
-            src={MainImg}
+            className="w-auto max-h-[700px]"
+            src={HomepageBg}
             alt="main-img"
           />
-          <div className="flex flex-col slogan font-extrabold px-4 py-4 items-center">
-            <p className="text-center">*** комплексные решения в сфере пожарной безопасности</p>
-          </div>
         </section>
 
         {/* <section className="my-24 flex items-start justify-center gap-4">
