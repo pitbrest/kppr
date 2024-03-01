@@ -1,7 +1,9 @@
 import "./HomePage.css";
 import { Container } from "../../components/Container";
 import HomepageBg from "../../assets/images/homepage-bg.png";
-import Main from "../../assets/images/1.png";
+import { BsArrowDownCircleFill } from "react-icons/bs";
+import { PiArrowFatLinesDownFill } from "react-icons/pi";
+import { TbArrowBigDownFilled } from "react-icons/tb";
 
 import { motion } from "framer-motion";
 
@@ -19,7 +21,7 @@ function HomePage() {
   return (
     <>
       <Container>
-        <section className="flex flex-col justify-start items-center mb-60">
+        <section className="flex flex-col justify-start items-center mb-16">
           <img
             className="w-auto max-h-[700px]"
             src={HomepageBg}
@@ -27,15 +29,75 @@ function HomePage() {
           />
         </section>
 
-        {/* <section className="my-24 flex items-start justify-center gap-4">
+        <section className="mb-24 flex items-start justify-center gap-4 ps-20">
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2 }}
+            animate={{ y: ["20%", "-20%", "20%"], opacity: ["0", "1"] }}
+            transition={{
+              y: {
+                duration: 1,
+                repeat: Infinity,
+                ease: "easeOut",
+                delay: 4,
+              },
+              opacity: {
+                duration: 1,
+                repeat: Infinity,
+                ease: "easeOut",
+                delay: 4,
+              },
+            }}
           >
-            <FaArrowDownLong size={30} />
+            <PiArrowFatLinesDownFill
+              size={30}
+              color="red"
+            />
           </motion.div>
           <motion.div
+            animate={{ y: ["20%", "-20%", "20%"], opacity: ["0", "1"] }}
+            transition={{
+              y: {
+                duration: 1,
+                repeat: Infinity,
+                ease: "easeOut",
+                delay: 4.5,
+              },
+              opacity: {
+                duration: 1,
+                repeat: Infinity,
+                ease: "easeOut",
+                delay: 4.5,
+              },
+            }}
+          >
+            <PiArrowFatLinesDownFill
+              size={30}
+              color="red"
+            />
+          </motion.div>
+          <motion.div
+            animate={{ y: ["20%", "-20%", "20%"], opacity: ["0", "1"] }}
+            transition={{
+              y: {
+                duration: 1,
+                repeat: Infinity,
+                ease: "easeOut",
+                delay: 5,
+              },
+              opacity: {
+                duration: 1,
+                repeat: Infinity,
+                ease: "easeOut",
+                delay: 5,
+              },
+            }}
+          >
+            <PiArrowFatLinesDownFill
+              size={30}
+              color="red"
+            />
+          </motion.div>
+
+          {/* <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.2 }}
@@ -48,8 +110,8 @@ function HomePage() {
             transition={{ delay: 2.3 }}
           >
             <FaArrowDownLong size={30} />
-          </motion.div>
-        </section> */}
+          </motion.div> */}
+        </section>
 
         <section className="slider min-[900px]:h-[60vh] h-auto">
           <Slider>{createSlide(sliderData)}</Slider>

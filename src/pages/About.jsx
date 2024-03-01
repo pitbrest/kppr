@@ -7,7 +7,7 @@ function About() {
   return (
     <Container>
       <div className="about-wrapper about px-5 bg-opacity-80 max-w-5xl mx-auto">
-        <h5 className="font-extrabold uppercase py-4 text-center bg-[--bgc-red] text-[--fc-light]">
+        <h5 className="font-extrabold uppercase pt-4 pb-16 text-center bg-[--bgc-red] text-[--fc-light]">
           О предприятии
         </h5>
         <p>
@@ -45,7 +45,7 @@ function About() {
           г.Дрогичин, г.Пинск, г.Лунинец и г.Столин.
         </p>
         <br />
-        <h6 className="font-bold underline">Производственная деятельность:</h6>
+        <h6 className="font-bold">Производственная деятельность:</h6>
         <ul className="ps-6">
           <li>
             <p>
@@ -97,7 +97,7 @@ function About() {
           </li>
         </ul>
         <br />
-        <h6 className="font-bold underline ">Услуги:</h6>
+        <h6 className="font-bold">Услуги:</h6>
         <ul className="ps-6">
           <li>
             <p>
@@ -139,7 +139,7 @@ function About() {
             </p>
           </li>
         </ul>
-        <div className="mt-10 flex justify-end gap-5">
+        <div className="mt-20 flex justify-end gap-5">
           <Button
             title="На главную"
             src="/"

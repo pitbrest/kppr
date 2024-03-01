@@ -24,8 +24,8 @@ function Commerce() {
           id="accordionExample"
           className="max-w-7xl mx-auto text-[--fc-dark]"
         >
-          <div className="text-base mb-10 min-[576px]:leading-7 leading-normal">
-            <p>
+          <div className="text-lg mb-10 min-[576px]:leading-7 leading-normal">
+            <p className="pb-5">
               Реализуем первичные средства пожаротушения, оборудование и сопутствующие товары
               противопожарной тематики. Широкий спектр представленных товаров поможет Вам оснастить
               здания и сооружения любого назначения в соответствии с правилами пожарной
@@ -70,7 +70,7 @@ function Commerce() {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="3"
-                    stroke="#c0000a"
+                    stroke="teal"
                     className="h-6 w-6"
                   >
                     <path
@@ -132,7 +132,7 @@ function Commerce() {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="3"
-                    stroke="#c0000a"
+                    stroke="teal"
                     className="h-6 w-6"
                   >
                     <path
@@ -194,7 +194,7 @@ function Commerce() {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="3"
-                    stroke="#c0000a"
+                    stroke="teal"
                     className="h-6 w-6"
                   >
                     <path
@@ -229,7 +229,7 @@ function Commerce() {
               </div>
             </TECollapse>
           </div>
-          <div className="mt-10 flex justify-end gap-5">
+          <div className="mt-20 flex justify-end gap-5">
             <Button
               title="На главную"
               src="/"

@@ -10,9 +10,12 @@ function Services() {
         className="max-w-7xl mx-auto text-[--fc-dark]"
       >
         <div className="text-base mb-10 min-[576px]:leading-7 leading-normal">
-          <ul className="">
-            Выполняем широкий спектр строительно-монтажных работ противопожарного профиля а также в
-            смежных направлениях:
+          <ul>
+            <p className="text-lg font-bold pb-5">
+              Выполняем широкий спектр строительно-монтажных работ противопожарного профиля а также
+              в смежных направлениях:
+            </p>
+
             <li className="flex items-center justify-between my-2">
               <div className="flex items-center justify-start gap-6">
                 <FaCircle size={10} />
