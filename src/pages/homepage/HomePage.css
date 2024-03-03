@@ -27,7 +27,7 @@
 .swiper-rtl .swiper-button-prev:after,
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  color: var(--fc-dark);
+  color: var(--color-dark);
   font-weight: bold;
   font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320))) !important;
 }

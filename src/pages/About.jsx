@@ -7,7 +7,7 @@ function About() {
   return (
     <Container>
       <div className="about-wrapper about px-5 bg-opacity-80 max-w-5xl mx-auto">
-        <h5 className="font-extrabold uppercase pt-4 pb-16 text-center bg-[--bgc-red] text-[--fc-light]">
+        <h5 className="font-extrabold uppercase py-4 mb-16 text-center bg-[--color-teal] text-[--color-light]">
           О предприятии
         </h5>
         <p>

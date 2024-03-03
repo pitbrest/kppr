@@ -1,6 +1,8 @@
 import "./HomePage.css";
 import { Container } from "../../components/Container";
 import HomepageBg from "../../assets/images/homepage-bg.png";
+import Bg_1 from "../../assets/images/bg-1.png";
+import Bg_2 from "../../assets/images/bg-2.png";
 import { BsArrowDownCircleFill } from "react-icons/bs";
 import { PiArrowFatLinesDownFill } from "react-icons/pi";
 import { TbArrowBigDownFilled } from "react-icons/tb";
@@ -8,6 +10,7 @@ import { TbArrowBigDownFilled } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 import { Slider } from "../../components/Slider";
+import { NewSlider } from "../../components/NewSlider/NewSlider";
 import { sliderData, createSlide } from "../../appData/sliderData";
 import { FaArrowDownLong } from "react-icons/fa6";
 import {
@@ -16,17 +19,35 @@ import {
   resultsData,
   createResults,
 } from "../../appData/homePageData";
+import { Translate } from "@mui/icons-material";
 
 function HomePage() {
   return (
     <>
       <Container>
-        <section className="flex flex-col justify-start items-center mb-16">
+        <section className="flex flex-col justify-start items-center mb-32 relative">
           <img
             className="w-auto max-h-[700px]"
-            src={HomepageBg}
+            src={Bg_1}
             alt="main-img"
           />
+          <motion.div
+            className="absolute -bottom-14 left-[47%]"
+            animate={{ opacity: [0, 1] }}
+            transition={{
+              opacity: {
+                duration: 1.5,
+                ease: "easeOut",
+                delay: 1.5,
+              },
+            }}
+          >
+            <img
+              className="max-h-[700px] w-auto max-w-[170px]"
+              src={Bg_2}
+              alt="main-img"
+            />
+          </motion.div>
         </section>
 
         <section className="mb-24 flex items-start justify-center gap-4 ps-20">
@@ -43,7 +64,7 @@ function HomePage() {
                 duration: 1,
                 repeat: Infinity,
                 ease: "easeOut",
-                delay: 4,
+                delay: 5,
               },
             }}
           >
@@ -114,7 +135,8 @@ function HomePage() {
         </section>
 
         <section className="slider min-[900px]:h-[60vh] h-auto">
-          <Slider>{createSlide(sliderData)}</Slider>
+          <NewSlider />
+          {/* <Slider>{createSlide(sliderData)}</Slider> */}
         </section>
         {/* <section className="mb-14 mt-10">
           <motion.div
