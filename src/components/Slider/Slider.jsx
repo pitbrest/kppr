@@ -1,19 +1,18 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { sliderData } from "../../appData/sliderData";
+import { Swiper } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 
-import "./NewSlider.css";
+import "./Slider.css";
 
 // import required modules
 import { EffectCube, Pagination, Autoplay } from "swiper/modules";
 
-const NewSlider = () => {
+const Slider = ({ data }) => {
   return (
     <>
       <Swiper
@@ -26,8 +25,8 @@ const NewSlider = () => {
         effect={"cube"}
         grabCursor={true}
         cubeEffect={{
-          shadow: true,
-          slideShadows: true,
+          shadow: false,
+          slideShadows: false,
           shadowOffset: 20,
           shadowScale: 0.94,
         }}
@@ -35,17 +34,10 @@ const NewSlider = () => {
         modules={[EffectCube, Pagination, Autoplay]}
         className="mySwiper"
       >
-        {sliderData.map((i) => (
-          <SwiperSlide>
-            <img
-              src={i.img}
-              alt={i.img}
-            />
-          </SwiperSlide>
-        ))}
+        {data}
       </Swiper>
     </>
   );
 };
 
-export { NewSlider };
+export { Slider };

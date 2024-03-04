@@ -12,8 +12,8 @@ function Services() {
         <div className="text-base mb-10 min-[576px]:leading-7 leading-normal">
           <ul>
             <p className="text-lg font-bold pb-5">
-              Выполняем широкий спектр строительно-монтажных работ противопожарного профиля а также
-              в смежных направлениях:
+              Выполняем строительно-монтажные работы противопожарного профиля а также в смежных
+              направлениях:
             </p>
 
             <li className="flex items-center justify-between my-2">
