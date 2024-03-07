@@ -1,4 +1,3 @@
-import "./HomePage.css";
 import { Container } from "../../components/Container";
 import Bg_1 from "../../assets/images/bg-1.png";
 import Bg_2 from "../../assets/images/bg-2.png";
@@ -85,7 +84,7 @@ function HomePage() {
               Наши преимущества
             </h3>
           </motion.div>
-          <div className="flex">{createAdvantages(advantagesData)}</div>
+          <div className="flex justify-center">{createAdvantages(advantagesData)}</div>
         </section>
 
         <section className="min-[540px]:mb-40 mb-20">
@@ -100,7 +99,7 @@ function HomePage() {
               Наши результаты
             </h3>
           </motion.div>
-          <div className="flex">{createResults(resultsData)}</div>
+          <div className="flex justify-center">{createResults(resultsData)}</div>
         </section>
       </Container>
     </>
