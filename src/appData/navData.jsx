@@ -15,7 +15,7 @@ const navItems = [
 const servicesData = [
   {
     id: "services",
-    name: "СМР",
+    name: "Работы и услуги",
     href: "activities/services",
     active: false,
   },

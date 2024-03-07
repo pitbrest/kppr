@@ -38,7 +38,7 @@ const resultsData = [
     duration: 5,
   },
 ];
-const delay = [0, 0.3, 0.5, 0.7, 0.9, 1.1];
+// const delay = [0, 0.3, 0.5, 0.7, 0.9, 1.1];
 
 const createAdvantages = (data) => {
   return (

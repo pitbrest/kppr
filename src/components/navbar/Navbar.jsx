@@ -54,8 +54,8 @@ const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
                 <div
                   className={
                     isDropDownOpen
-                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto z-10 bg-[--color-green] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] active"
-                      : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto z-10"
+                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[90px] z-100 w-48 h-auto z-10 bg-[--color-green] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] active"
+                      : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-48 h-auto z-10"
                   }
                 >
                   {servicesData.map((item) => (

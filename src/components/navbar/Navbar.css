@@ -32,3 +32,9 @@
 .dropdown-container a:first-child {
   border-bottom: 2px solid var(--color-light) !important;
 }
+.dropdown-container a.active {
+  background: rgb(243, 243, 243);
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  /* border-right: 1px solid lightgray; */
+}

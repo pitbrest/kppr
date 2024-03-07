@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "../Container";
-import AltLogo from "../../assets/images/altLogo.webp";
+
+import Logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
 import Navbar from "../navbar/Navbar";
@@ -19,8 +20,8 @@ export const Header = ({ modalToggler }) => {
             onClick={() => (isDropDownOpen ? dropDownToggler() : null)}
           >
             <img
-              className="min-[1920px]:w-[65px] w-[50px]"
-              src={AltLogo}
+              className="min-[1920px]:w-[150px] w-[150px]"
+              src={Logo}
               alt="logo"
             />
           </Link>
