@@ -11,7 +11,7 @@ const servicesData = {
   ],
   services: [
     "проверка технического состояния дымовых и вентиляционных каналов, определение воздухообмена, проверка дымовых каналов на наличие тяги",
-    "разработка проектов пожарной автоматики, планов эвакуации людей при пожаре, схем движения транспорта и пр.",
+    "разработка и печать планов эвакуации людей при пожаре, схем движения транспорта и пр.",
     "подготовка по программе пожарно-технического минимума (ПТМ)",
   ],
 };
@@ -26,5 +26,15 @@ const productionHandler = () =>
       <FaEllipsisVertical size={15} />
     </li>
   ));
+const servicesHandler = () =>
+  servicesData.services.map((item) => (
+    <li className="flex items-center justify-between my-4">
+      <div className="flex items-center justify-start gap-6 w-full">
+        <FaCircle size={10} />
+        <p className="leading-normal block max-w-[80%]">{item};</p>
+      </div>
+      <FaEllipsisVertical size={15} />
+    </li>
+  ));
 
-export { productionHandler };
+export { productionHandler, servicesHandler };
