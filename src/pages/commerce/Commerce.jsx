@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import Button from "../../components/Button";
 import { TECollapse } from "tw-elements-react";
 import { Container } from "../../components/Container";
-import { commerceData1, commerceData2, commerceData3 } from "../../appData/commerceData";
+import {
+  commerceDataContent,
+  commerceData1,
+  commerceData2,
+  commerceData3,
+} from "../../appData/commerceData";
 
 import "./Commerce.css";
+import { PageRedirection } from "../../components/page-navigation/PageNavigation";
 
 function Commerce() {
   const [activeElement, setActiveElement] = useState("");
@@ -24,12 +29,17 @@ function Commerce() {
           id="accordionExample"
           className="max-w-7xl mx-auto text-[--fc-dark]"
         >
-          <div className="text-base mb-10 min-[576px]:leading-7 leading-normal">
+          <div className="mb-10">
+            <h4 className="text-2xl font-bold p-3 bg-[--color-teal] text-[--color-light] text-center mb-10">
+              Торговля
+            </h4>
             <p>
               Реализуем первичные средства пожаротушения, оборудование и сопутствующие товары
-              противопожарной тематики. Широкий спектр представленных товаров поможет Вам оснастить
-              здания и сооружения любого назначения в соответствии с правилами пожарной
-              безопасности.
+              противопожарной тематики.
+            </p>
+            <p className="pb-2">
+              Широкий спектр представленных товаров поможет Вам оснастить здания и сооружения любого
+              назначения в соответствии с правилами пожарной безопасности.
             </p>
             <p>
               Заказать и приобрести товары можно в нашем
@@ -43,7 +53,7 @@ function Commerce() {
               в г.Бресте, а также обратившись в нашу региональную сеть.
             </p>
           </div>
-          <div className=" border-t border-[#bebebe] mb-1">
+          <div className=" border-t border-[#bebebe]">
             <h2
               className="mb-0"
               id="headingOne"
@@ -70,7 +80,7 @@ function Commerce() {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="3"
-                    stroke="#c0000a"
+                    stroke="teal"
                     className="h-6 w-6"
                   >
                     <path
@@ -84,25 +94,9 @@ function Commerce() {
             </h2>
             <TECollapse
               show={activeElement === "element1"}
-              className="!mt-0 !rounded-b-none"
+              className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce1 p-4">
-                {commerceData1.map((item) => (
-                  <div
-                    className="commerce-item px-5 py-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex flex-col gap-2 justify-start items-center rounded-md border border-[#d1d1d1] h-[280px]"
-                    key={item.title}
-                  >
-                    <img
-                      className="basis-2/3 object-center h-2/3"
-                      src={item.img}
-                      alt=""
-                    />
-                    <h6 className="font-medium text-center flex items-center basis-1/3">
-                      {item.title}
-                    </h6>
-                  </div>
-                ))}
-              </div>
+              <div className="commerce p-4">{commerceDataContent(commerceData1)}</div>
             </TECollapse>
           </div>
           <div className="border-t border-[#bebebe]">
@@ -132,7 +126,7 @@ function Commerce() {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="3"
-                    stroke="#c0000a"
+                    stroke="teal"
                     className="h-6 w-6"
                   >
                     <path
@@ -146,25 +140,9 @@ function Commerce() {
             </h2>
             <TECollapse
               show={activeElement === "element2"}
-              className="!mt-0 !rounded-b-none"
+              className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce2 p-4">
-                {commerceData2.map((item) => (
-                  <div
-                    className="commerce-item px-5 py-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex flex-col gap-2 justify-start items-center rounded-md border-t border-[#d1d1d1] h-[190px]"
-                    key={item.title}
-                  >
-                    <img
-                      className="max-w-40 basis-2/3 object-center h-2/3"
-                      src={item.img}
-                      alt=""
-                    />
-                    <h6 className="font-medium text-center flex items-center basis-1/3">
-                      {item.title}
-                    </h6>
-                  </div>
-                ))}
-              </div>
+              <div className="commerce p-4">{commerceDataContent(commerceData2)}</div>
             </TECollapse>
           </div>
           <div className="border-t border-b border-[#bebebe] mb-10">
@@ -194,7 +172,7 @@ function Commerce() {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="3"
-                    stroke="#c0000a"
+                    stroke="teal"
                     className="h-6 w-6"
                   >
                     <path
@@ -208,37 +186,12 @@ function Commerce() {
             </h2>
             <TECollapse
               show={activeElement === "element3"}
-              className="!mt-0 !rounded-b-none"
+              className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce3 p-4">
-                {commerceData3.map((item) => (
-                  <div
-                    className="commerce-item px-5 py-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] flex flex-col gap-2 justify-start items-center rounded-md border-t border-[#d1d1d1] h-[190px]"
-                    key={item.title}
-                  >
-                    <img
-                      className="max-w-40 basis-2/3 object-center h-2/3"
-                      src={item.img}
-                      alt=""
-                    />
-                    <h6 className="font-medium text-center flex items-center basis-1/3">
-                      {item.title}
-                    </h6>
-                  </div>
-                ))}
-              </div>
+              <div className="commerce p-4">{commerceDataContent(commerceData3)}</div>
             </TECollapse>
           </div>
-          <div className="mt-10 flex justify-end gap-5">
-            <Button
-              title="На главную"
-              src="/"
-            />
-            <Button
-              title="Контакты"
-              src="/contacts"
-            />
-          </div>
+          <PageRedirection />
         </div>
       </>
     </Container>

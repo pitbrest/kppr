@@ -1,0 +1,28 @@
+.swiper {
+  max-width: 800px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .swiper {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -40px !important;
+}
+@media (max-width: 768px) {
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -10px !important;
+  }
+}
+.swiper-pagination-bullet-active {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-teal);
+}
+.slider p {
+  font-size: calc(14px + 4 * ((100vw - 320px) / (1280 - 320))) !important;
+  line-height: 20px;
+  min-height: 80px;
+}

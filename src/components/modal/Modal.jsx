@@ -56,14 +56,14 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
   return (
     <div
       ref={modalRef}
-      className="modal"
+      className="modal font-bold"
     >
       <div
         className="modal-wrapper"
         ref={modalWrapperRef}
       ></div>
       <ul
-        className="modal-content bg-[--bgc-light] px-5 py-10"
+        className="modal-content bg-[--color-light] px-5 py-10"
         ref={modalContentRef}
       >
         {navItems.map((item, idx) =>
@@ -77,13 +77,13 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
               }}
             >
               {currentIcon(idx)}
-              <li className="px-3 my-2 font-medium">{item.name.toUpperCase()}</li>
+              <li className="px-3 my-2 font-bold">{item.name.toUpperCase()}</li>
             </NavLink>
           ) : (
             <div
               className={
                 isDropDownOpen
-                  ? "modalDropdown-container burger-nav-item nav-item mb-5 bg-slate-100"
+                  ? "modalDropdown-container burger-nav-item nav-item mb-5 bg-slate-50"
                   : "modalDropdown-container burger-nav-item nav-item"
               }
               key={item.name}
@@ -92,7 +92,7 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
             >
               <div className="nav-item flex items-center justify-start gap-1">
                 {currentIcon(idx)}
-                <div className=" text-base font-medium uppercase flex items-center">
+                <div className=" text-base uppercase flex items-center">
                   <p className="px-3 my-2 ">Деятельность</p>
                   {!isDropDownOpen ? (
                     <MdKeyboardDoubleArrowDown className="mr-1" />
@@ -112,8 +112,11 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
                       dropDownToggler();
                     }}
                   >
-                    <MdCircle size={10} />
-                    <li className="ps-1 my-2 font-medium">{item.name.toUpperCase()}</li>
+                    <MdCircle
+                      size={10}
+                      color="var(--color-teal)"
+                    />
+                    <li className="ps-1 my-2 font-semibold">{item.name.toUpperCase()}</li>
                   </NavLink>
                 ))}
               </div>

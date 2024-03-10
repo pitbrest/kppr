@@ -9,6 +9,7 @@
   background-color: rgb(81 90 91 / 67%);
   z-index: 11;
   transition: width 0ms 450ms;
+  font-weight: 700 !important;
 }
 .modal-wrapper.active {
   width: 100vw !important;
@@ -19,7 +20,7 @@
   width: max(40vw, 240px);
   position: absolute;
   top: 0;
-  left: -1000px;
+  left: -1200px;
   transition: left 1500ms;
   z-index: 12;
   font-family: var(--ff-first);
@@ -33,7 +34,11 @@
   border-bottom: 1px solid var(--brdc-semi);
 }
 .burger-nav-item.active {
-  background-color: rgb(208 218 228);
+  background-color: var(--color-green);
+  color: var(--color-light);
+}
+.burger-nav-item.active svg {
+  color: var(--color-light) !important;
 }
 .modal-content button {
   color: var(--fc-dark) !important;

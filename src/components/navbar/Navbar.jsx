@@ -21,7 +21,7 @@ const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
         />
       </div>
       <div>
-        <ul className="min-[768px]:flex hidden items-center gap-4 text-sm font-medium">
+        <ul className="min-[768px]:flex hidden items-center gap-4 font-bold">
           {navItems.map((item) =>
             item.name !== "Деятельность" ? (
               <NavLink
@@ -30,7 +30,7 @@ const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
                 className="main-nav-item p-2 nav-item"
                 onClick={() => (isDropDownOpen ? dropDownToggler() : null)}
               >
-                <li>{item.name.toUpperCase()}</li>
+                <li className="font-bold">{item.name.toUpperCase()}</li>
               </NavLink>
             ) : (
               <div
@@ -41,8 +41,8 @@ const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
                 onClick={() => dropDownToggler()}
               >
                 <div className="nav-item flex">
-                  <div className="font-medium uppercase flex items-center">
-                    <p className="pr-1 my-2 font-medium">Деятельность</p>
+                  <div className="uppercase flex items-center">
+                    <p className="pr-1 my-2">Деятельность</p>
                     {!isDropDownOpen ? (
                       <MdKeyboardDoubleArrowDown size={15} />
                     ) : (
@@ -54,15 +54,15 @@ const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
                 <div
                   className={
                     isDropDownOpen
-                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)] z-10 active "
-                      : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-40 h-auto bg-[var(--bgc-dark)] z-10"
+                      ? "dropdown-container absolute top-[85px] min-[1920px]:top-[85px] z-100 w-48 h-auto z-10 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-white active"
+                      : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-48 h-auto z-10"
                   }
                 >
                   {servicesData.map((item) => (
                     <NavLink
                       key={item.name}
                       to={item.href}
-                      className="dropdown-item flex items-center justify-start gap-1 px-2 py-1"
+                      className="dropdown-item flex items-center justify-start gap-1 p-2 bg-[--color-green]"
                       onClick={() => {
                         dropDownToggler();
                       }}

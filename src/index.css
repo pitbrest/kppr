@@ -7,43 +7,25 @@
   font-family: "Oswald";
   src: url("./assets/fonts/Oswald/Oswald.ttf") format("opentype");
 }
-@font-face {
-  font-family: "Prata";
-  src: url("./assets/fonts/Prata/Prata-Regular.ttf") format("opentype");
-}
 
 :root {
-  --bgc-light: rgb(255, 255, 255);
-  --bgc-light-grey: #edf1f1;
+  --color-light: #ffffff;
+  --color-dark: #282727;
+  --color-teal: #008794;
+  --color-green: #376e74f7;
+  --color-yellow: #ffd800;
 
-  --bgc-dark: #04667a;
-  --bgc-gold: gold;
-  --bgc-grey: #ffdd86;
-  --bgc-red: #b2494f;
-
-  --brdc-light: rgb(255, 255, 255);
-  --brdc-semi: #5e6d7a;
-  --brdc-dark: #0c4a6e;
-
-  --fc-light: #fcfcee;
-  --fc-dark: #474a51;
-  --fc-alt: #b2494f;
-
-  --color-active: #05a6c6;
-
-  --ff-first: "Oswald";
-  --ff-second: "Prata";
+  --ff-main: "Oswald";
 }
 
 body {
-  font-family: var(--ff-first);
-  color: var(--fc-dark);
+  font-family: var(--ff-main);
+  color: var(--color-dark);
   user-select: none;
-  /* background: center / auto repeat url(./assets/images/bg-fill.jpg); */
 }
 
 * {
-  border-color: var(--brdc-semi);
+  border-color: var(--color-grey);
 }
 a {
   cursor: pointer;
@@ -53,14 +35,17 @@ a {
 h5 {
   font-size: calc(28px + 4 * ((100vw - 320px) / (1280 - 320))) !important;
   line-height: 30px !important;
-  /* color: #b7350e; */
 }
 
 /* About */
 .about {
-  /* text-indent: 25px; */
   text-align: justify;
 }
 .about a:hover {
   text-decoration: underline;
+}
+header img {
+  filter: invert(99%) sepia(61%) saturate(443%) hue-rotate(208deg) brightness(332%) contrast(100%);
+  -webkit-filter: invert(99%) sepia(61%) saturate(443%) hue-rotate(208deg) brightness(332%)
+    contrast(100%);
 }

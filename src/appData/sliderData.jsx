@@ -56,11 +56,11 @@ const createSlide = (data) =>
       <div className="">
         <div className="flex flex-col justify-start items-center gap-4">
           <img
-            className="relative"
+            className="relative shrink-0 basis-4/6"
             src={i.img}
-            alt="slide img"
+            alt="slide_img"
           />
-          <p className=" min-[768px]:w-[40%] w-[70%] text-center font-semibold py-2 px-4">
+          <p className=" min-[768px]:w-[70%] w-[90%] text-center font-semibold py-2 px-2 basis-2/6 shrink-0 bg-white">
             {i.label}
           </p>
         </div>

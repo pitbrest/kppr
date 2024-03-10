@@ -53,4 +53,19 @@ const commerceData3 = [
   { title: `Огнезащитный состав для м/к КМД-О-Металл`, img: KMD_O_M },
 ];
 
-export { commerceData1, commerceData2, commerceData3 };
+const commerceDataContent = (data) =>
+  data.map((item) => (
+    <div
+      className="commerce-item px-5 py-4 min-[768px]:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] shadow-none flex flex-col gap-2 justify-between items-center rounded-sm border border-[#d1d1d1] h-[280px]"
+      key={item.title}
+    >
+      <img
+        className="basis-2/3 object-center h-2/3"
+        src={item.img}
+        alt=""
+      />
+      <h6 className="font-medium text-sm text-center flex items-center basis-1/3">{item.title}</h6>
+    </div>
+  ));
+
+export { commerceDataContent, commerceData1, commerceData2, commerceData3 };

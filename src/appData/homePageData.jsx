@@ -38,21 +38,21 @@ const resultsData = [
     duration: 5,
   },
 ];
-const delay = [0, 0.3, 0.5, 0.7, 0.9, 1.1];
+// const delay = [0, 0.3, 0.5, 0.7, 0.9, 1.1];
 
 const createAdvantages = (data) => {
   return (
     <div className="description p-2 flex items-start justify-center flex-wrap min-[594px]:gap-16 gap-0">
       {data.map((i, idx) => (
         <motion.div
-          className="flex flex-col items-center basis-[15%] rounded-2xl py-4 min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[240px] min-w-[240px]"
+          className="flex flex-col items-center basis-[15%] rounded-2xl py-4 min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[240px] min-w-[240px] border border-zinc-300"
           initial={{ opacity: 0, y: 100, rotate: +30 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           viewport={{ once: true, amount: 0.8 }}
           key={i.advantage}
-          transition={{ duration: 0.5, delay: delay[idx] }}
+          transition={{ duration: 1 }}
         >
-          <i.img className="text-[--bgc-dark] basis-[40%] w-full" />
+          <i.img className="text-[--color-green] basis-[40%] w-full color-[red]" />
           <span className="w-[80%] border-t border-2 border-[rgba(50,50,93,0.25)] mt-5 mb-2"></span>
           <div className="leading-5 px-3 pt-2 text-center font-medium text-lg w-[95%] hyphens-auto text-wrap">
             {i.advantage}
@@ -68,20 +68,21 @@ const createResults = (data) => {
     <div className="description p-2 flex items-center justify-center flex-wrap min-[594px]:gap-16 gap-0">
       {data.map((i, idx) => (
         <motion.div
-          className="flex flex-col items-center justify-start basis-[15%] rounded-2xl pt-4 min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[220px] min-w-[240px]"
-          initial={{ opacity: 0, y: 100, rotate: -30 }}
+          className="flex flex-col items-center justify-start basis-[15%] rounded-2xl pt-4 min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[220px] min-w-[240px] text-[--color-green] border border-zinc-300"
+          initial={{ opacity: 0, y: 100, rotate: +30 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           viewport={{ once: true, amount: 0.8 }}
           key={i.advantage}
-          transition={{ duration: 0.5, delay: delay[idx] }}
+          transition={{ duration: 1 }}
         >
           <CountUpComponent
             start={i.start}
             end={i.end}
             duration={i.duration}
+            color="red"
           />
           <span className="w-[80%] border-t border-2 border-[rgba(50,50,93,0.25)] mt-5 mb-2"></span>
-          <div className="leading-5 px-3 pt-2 text-center font-medium text-lg w-[95%] hyphens-auto text-wrap">
+          <div className="leading-5 px-3 pt-2 text-center font-medium text-lg w-[95%] hyphens-auto text-wrap text-[--color-dark]">
             {i.advantage}
           </div>
         </motion.div>

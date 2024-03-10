@@ -7,14 +7,14 @@
 
 .main-nav-item.active,
 .dropDown.cursor-pointer.active {
-  border-top: 3px solid var(--fc-light);
-  border-bottom: 3px solid var(--fc-light);
+  border-top: 3px solid var(--color-light);
+  border-bottom: 3px solid var(--color-light);
 }
 .dropdown-container {
   transform-origin: top;
   transform: rotateX(90deg);
   transition: all 0.2s ease-out;
-  /* border: 2px solid var(--fc-light); */
+  /* border: 2px solid var(--color-light); */
 }
 .dropdown-container.active {
   transform-origin: top;
@@ -26,8 +26,15 @@
   font-weight: 700;
 }
 .dropdown-item.active {
-  background-color: #05a6c6;
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 .dropdown-container a:first-child {
-  border-bottom: 2px solid var(--fc-light) !important;
+  border-bottom: 2px solid var(--color-light) !important;
+}
+.dropdown-container a.active {
+  background: rgb(243, 243, 243);
+  border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  /* border-right: 1px solid lightgray; */
 }

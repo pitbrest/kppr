@@ -15,7 +15,7 @@ const navItems = [
 const servicesData = [
   {
     id: "services",
-    name: "СМР",
+    name: "Работы и услуги",
     href: "activities/services",
     active: false,
   },
@@ -24,19 +24,44 @@ const servicesData = [
 
 const currentIcon = (idx) => {
   if (idx === 0) {
-    return <GrServices size={20} />;
+    return (
+      <GrServices
+        size={20}
+        color="var(--color-teal)"
+      />
+    );
   }
   if (idx === 1) {
-    return <RiTeamFill size={20} />;
+    return (
+      <RiTeamFill
+        size={20}
+        color="var(--color-teal)"
+      />
+    );
   }
   if (idx === 2) {
-    return <GiNewspaper size={20} />;
+    return (
+      <GiNewspaper
+        size={20}
+        color="var(--color-teal)"
+      />
+    );
   }
   if (idx === 3) {
-    return <AiOutlineContacts size={20} />;
+    return (
+      <AiOutlineContacts
+        size={20}
+        color="var(--color-teal)"
+      />
+    );
   }
   if (idx === 4) {
-    return <GrLocation size={20} />;
+    return (
+      <GrLocation
+        size={20}
+        color="var(--color-teal)"
+      />
+    );
   }
 };
 
