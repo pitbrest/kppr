@@ -45,7 +45,7 @@ function HomePage() {
 
         <section className="mb-24 flex items-start justify-center gap-4">
           <motion.div
-            animate={{ y: ["20%", "-20%", "20%"], opacity: ["0", "1"] }}
+            animate={{ y: ["20%", "-20%", "20%"], opacity: [0, 1] }}
             transition={{
               y: {
                 duration: 1,
@@ -55,7 +55,6 @@ function HomePage() {
               },
               opacity: {
                 duration: 1,
-                repeat: Infinity,
                 ease: "easeOut",
                 delay: 3,
               },
@@ -63,7 +62,7 @@ function HomePage() {
           >
             <FaArrowCircleDown
               size={30}
-              color="red"
+              color="teal"
             />
           </motion.div>
         </section>

@@ -20,7 +20,7 @@
   width: max(40vw, 240px);
   position: absolute;
   top: 0;
-  left: -1000px;
+  left: -1200px;
   transition: left 1500ms;
   z-index: 12;
   font-family: var(--ff-first);

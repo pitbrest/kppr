@@ -54,7 +54,7 @@ const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
                 <div
                   className={
                     isDropDownOpen
-                      ? "dropdown-container absolute top-[77px] min-[1920px]:top-[90px] z-100 w-48 h-auto z-10 bg-[--color-green] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] active"
+                      ? "dropdown-container absolute top-[85px] min-[1920px]:top-[85px] z-100 w-48 h-auto z-10 shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-white active"
                       : "dropdown-container absolute top-[77px] min-[1920px]:top-[89px] z-100 w-48 h-auto z-10"
                   }
                 >
@@ -62,7 +62,7 @@ const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
                     <NavLink
                       key={item.name}
                       to={item.href}
-                      className="dropdown-item flex items-center justify-start gap-1 p-2"
+                      className="dropdown-item flex items-center justify-start gap-1 p-2 bg-[--color-green]"
                       onClick={() => {
                         dropDownToggler();
                       }}

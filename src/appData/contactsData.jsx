@@ -272,18 +272,4 @@ const createFilialContactsItem = (data) => {
   });
 };
 
-const pageScrollingHandler = (direction) => {
-  if (direction === "top") {
-    window.scrollTo(0, 0);
-  } else {
-    window.scrollTo(0, 10000);
-  }
-};
-
-export {
-  contacts,
-  filialsContacts,
-  createContactsItem,
-  createFilialContactsItem,
-  pageScrollingHandler,
-};
+export { contacts, filialsContacts, createContactsItem, createFilialContactsItem };

@@ -3,12 +3,20 @@ import { useEffect, useState } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 
-import { pageScrollingHandler } from "../../appData/contactsData";
+import Button from "../Button";
 
 const PageNavigation = () => {
   const [scrollY, setScrollY] = useState(null);
 
   // const screenWidth = window.screen.width;
+
+  const pageScrollingHandler = (direction) => {
+    if (direction === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 100000, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -34,4 +42,19 @@ const PageNavigation = () => {
   );
 };
 
-export { PageNavigation };
+const PageRedirection = () => {
+  return (
+    <div className="flex justify-end gap-5">
+      <Button
+        title="На главную"
+        src="/"
+      />
+      <Button
+        title="Контакты"
+        src="/contacts"
+      />
+    </div>
+  );
+};
+
+export { PageNavigation, PageRedirection };

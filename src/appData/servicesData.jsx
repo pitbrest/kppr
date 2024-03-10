@@ -18,9 +18,15 @@ const servicesData = {
 
 const productionHandler = () =>
   servicesData.production.map((item) => (
-    <li className="flex items-center justify-between my-4">
+    <li
+      className="flex items-center justify-between mb-3"
+      key={item.split(",")[0] || item}
+    >
       <div className="flex items-center justify-start gap-6 w-full">
-        <FaCircle size={10} />
+        <FaCircle
+          size={10}
+          color="teal"
+        />
         <p className="leading-normal block max-w-[80%]">{item};</p>
       </div>
       <FaEllipsisVertical size={15} />
@@ -28,9 +34,15 @@ const productionHandler = () =>
   ));
 const servicesHandler = () =>
   servicesData.services.map((item) => (
-    <li className="flex items-center justify-between my-4">
+    <li
+      className="flex items-center justify-between mb-3"
+      key={item.split(",")[0] || item}
+    >
       <div className="flex items-center justify-start gap-6 w-full">
-        <FaCircle size={10} />
+        <FaCircle
+          size={10}
+          color="teal"
+        />
         <p className="leading-normal block max-w-[80%]">{item};</p>
       </div>
       <FaEllipsisVertical size={15} />
