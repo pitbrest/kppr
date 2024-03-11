@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route
-        path="pitbrest.github.io/kppr/"
+        path="/"
         element={<Layout />}
       >
         <Route
