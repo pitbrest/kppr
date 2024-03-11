@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/kppr/static/css/main.fdcff1f6.css",
-    "main.js": "/kppr/static/js/main.480455b5.js",
+    "main.js": "/kppr/static/js/main.528f9b8f.js",
     "static/js/23.be13b67e.chunk.js": "/kppr/static/js/23.be13b67e.chunk.js",
     "static/js/81.6b8c0c7c.chunk.js": "/kppr/static/js/81.6b8c0c7c.chunk.js",
-    "static/media/bg-1.png": "/kppr/static/media/bg-1.6ceb5957922828ffa0a8.png",
     "static/media/provodnik.png": "/kppr/static/media/provodnik.427b6f6e2743569b72cc.png",
     "static/media/bobs.png": "/kppr/static/media/bobs.ff0994c6a31cee445421.png",
     "static/media/komplekti.png": "/kppr/static/media/komplekti.9e825d8ae5409cb9c85e.png",
@@ -15,6 +14,7 @@
     "static/media/ognetushiteli.png": "/kppr/static/media/ognetushiteli.c6ed9630a742dd956a8f.png",
     "static/media/dveri.jpg": "/kppr/static/media/dveri.c3a9a8fa73be0aabd628.jpg",
     "static/media/protivogaz.png": "/kppr/static/media/protivogaz.45b84a2b569e6268d312.png",
+    "static/media/bg-1.jpg": "/kppr/static/media/bg-1.1b4b5f17a451d0533540.jpg",
     "static/media/pog-schit.png": "/kppr/static/media/pog-schit.5e61b1fa810a26c17f8a.png",
     "static/media/znaki-tablichki.png": "/kppr/static/media/znaki-tablichki.d2c899ebd2eb9a52f6f7.png",
     "static/media/izveschatel.png": "/kppr/static/media/izveschatel.677acc74979075f09b52.png",
@@ -35,12 +35,12 @@
     "static/media/logo.png": "/kppr/static/media/logo.6d176009970dd370504f.png",
     "index.html": "/kppr/index.html",
     "main.fdcff1f6.css.map": "/kppr/static/css/main.fdcff1f6.css.map",
-    "main.480455b5.js.map": "/kppr/static/js/main.480455b5.js.map",
+    "main.528f9b8f.js.map": "/kppr/static/js/main.528f9b8f.js.map",
     "23.be13b67e.chunk.js.map": "/kppr/static/js/23.be13b67e.chunk.js.map",
     "81.6b8c0c7c.chunk.js.map": "/kppr/static/js/81.6b8c0c7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fdcff1f6.css",
-    "static/js/main.480455b5.js"
+    "static/js/main.528f9b8f.js"
   ]
 }
