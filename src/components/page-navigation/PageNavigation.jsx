@@ -47,11 +47,11 @@ const PageRedirection = () => {
     <div className="flex justify-end gap-5">
       <Button
         title="На главную"
-        src="/"
+        src="/kppr/"
       />
       <Button
         title="Контакты"
-        src="/contacts"
+        src="/kppr/contacts"
       />
     </div>
   );

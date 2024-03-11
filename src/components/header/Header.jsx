@@ -15,7 +15,7 @@ export const Header = ({ modalToggler }) => {
       <Container>
         <div className="flex justify-between items-center">
           <Link
-            to="/"
+            to="/kppr/"
             className="py-[5px]"
             onClick={() => (isDropDownOpen ? dropDownToggler() : null)}
           >

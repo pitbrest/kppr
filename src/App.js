@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route
-        path="/"
+        path="/kppr/"
         element={<Layout />}
       >
         <Route

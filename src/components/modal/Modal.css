@@ -11,11 +11,6 @@
   transition: width 0ms 450ms;
   font-weight: 700 !important;
 }
-.modal-wrapper.active {
-  width: 100vw !important;
-  transition: width 0ms;
-  height: 100vh !important;
-}
 .modal-content {
   width: max(40vw, 240px);
   position: absolute;
@@ -26,9 +21,16 @@
   font-family: var(--ff-first);
   color: var(--fc-dark) !important;
 }
-.modal-content.active {
-  left: 0px;
-  transition: left 500ms;
+@media (max-width: 768px) {
+  .modal-wrapper.active {
+    width: 100vw !important;
+    transition: width 0ms;
+    height: 100vh !important;
+  }
+  .modal-content.active {
+    left: 0px;
+    transition: left 500ms;
+  }
 }
 .modal-wrapper .burger-nav-item:not(:last-child) {
   border-bottom: 1px solid var(--brdc-semi);
