@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kppr/static/css/main.93afa34b.css",
+    "main.css": "/kppr/static/css/main.fdcff1f6.css",
     "main.js": "/kppr/static/js/main.480455b5.js",
     "static/js/23.be13b67e.chunk.js": "/kppr/static/js/23.be13b67e.chunk.js",
     "static/js/81.6b8c0c7c.chunk.js": "/kppr/static/js/81.6b8c0c7c.chunk.js",
@@ -34,13 +34,13 @@
     "static/media/pogarotushenie.jpg": "/kppr/static/media/pogarotushenie.f788c2fd15a7acd40015.jpg",
     "static/media/logo.png": "/kppr/static/media/logo.6d176009970dd370504f.png",
     "index.html": "/kppr/index.html",
-    "main.93afa34b.css.map": "/kppr/static/css/main.93afa34b.css.map",
+    "main.fdcff1f6.css.map": "/kppr/static/css/main.fdcff1f6.css.map",
     "main.480455b5.js.map": "/kppr/static/js/main.480455b5.js.map",
     "23.be13b67e.chunk.js.map": "/kppr/static/js/23.be13b67e.chunk.js.map",
     "81.6b8c0c7c.chunk.js.map": "/kppr/static/js/81.6b8c0c7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93afa34b.css",
+    "static/css/main.fdcff1f6.css",
     "static/js/main.480455b5.js"
   ]
 }
