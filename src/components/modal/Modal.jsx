@@ -13,7 +13,6 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
 
   const dropDownToggler = () => setIsDropDownOpen(!isDropDownOpen);
 
-  const modalRef = useRef(null);
   const modalWrapperRef = useRef(null);
   const modalContentRef = useRef(null);
   const dropDownBtnRef = useRef(null);
@@ -52,12 +51,13 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
   useEffect(() => {
     classToggler([modalWrapperRef.current, modalContentRef.current], "active");
   }, [isModalOpen, classToggler]);
+  // открытие/закрытие модального окна при изменении isModalOpen
+  useEffect(() => {
+    classToggler([modalWrapperRef.current, modalContentRef.current], "active");
+  }, []);
 
   return (
-    <div
-      ref={modalRef}
-      className="modal font-bold"
-    >
+    <>
       <div
         className="modal-wrapper"
         ref={modalWrapperRef}
@@ -93,7 +93,7 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
               <div className="nav-item flex items-center justify-start gap-1">
                 {currentIcon(idx)}
                 <div className=" text-base uppercase flex items-center">
-                  <p className="px-3 my-2 ">Деятельность</p>
+                  <p className="px-3 my-2 font-bold">Деятельность</p>
                   {!isDropDownOpen ? (
                     <MdKeyboardDoubleArrowDown className="mr-1" />
                   ) : (
@@ -124,7 +124,7 @@ function Modal({ classToggler, isModalOpen, modalToggler }) {
           ),
         )}
       </ul>
-    </div>
+    </>
   );
 }
 
