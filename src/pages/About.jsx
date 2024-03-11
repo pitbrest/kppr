@@ -4,8 +4,8 @@ import { PageRedirection } from "../components/page-navigation/PageNavigation";
 function About() {
   return (
     <Container>
-      <div className="about-wrapper about px-5 bg-opacity-80 max-w-5xl mx-auto text-base">
-        <h5 className="font-extrabold uppercase py-4 mb-10 text-center bg-[--color-teal] text-[--color-light]">
+      <div className="about-wrapper about min-[576px]:px-5 px-2 bg-opacity-80 max-w-5xl mx-auto min-[576px]:text-base text-sm">
+        <h5 className="font-extrabold uppercase py-3 min-[576px]:mb-10 mb-7 text-center bg-[--color-teal] text-[--color-light]">
           О предприятии
         </h5>
         <p>
@@ -25,15 +25,15 @@ function About() {
           <span> </span>В структуре объединения функционирует 11 производственных предприятий,
           включающих в себя 41 районный производственный участок.
         </p>
-        <p className="pt-2">
+        <p className="pt-3">
           Предприятия структуры РГОО «БДПО» специализируются на противопожарных работах и услугах а
           также взаимодействуют с местными исполнительными и распорядительными органами по вопросам
           предупреждения пожаров. Одновременно развивается собственное производство предприятий
           структуры, представленное на данном этапе развития производством огнетушителей, автономных
           пожарных извещателей, огнезащитных составов для деревянных конструкций и пр.
         </p>
-        <br />
-        <p className="mb-10">
+
+        <p className="pt-3 mb-10">
           <span className="font-medium">
             Унитарное предприятие "Брестский областной комбинат противопожарных работ" РГОО "БДПО"
           </span>

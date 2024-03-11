@@ -44,7 +44,7 @@ const PageNavigation = () => {
 
 const PageRedirection = () => {
   return (
-    <div className="flex justify-end gap-5">
+    <div className="flex min-[574px]:justify-end justify-center gap-5">
       <Button
         title="На главную"
         src="/kppr/"

@@ -20,7 +20,7 @@ export const Header = ({ modalToggler }) => {
             onClick={() => (isDropDownOpen ? dropDownToggler() : null)}
           >
             <img
-              className="min-[1920px]:w-[150px] w-[150px]"
+              className="min-[1920px]:w-[150px] w-[100px]"
               src={Logo}
               alt="logo"
             />
