@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kppr/static/css/main.d4247d4b.css",
-    "main.js": "/kppr/static/js/main.7a2d882b.js",
+    "main.css": "/kppr/static/css/main.e4935919.css",
+    "main.js": "/kppr/static/js/main.e2c5615c.js",
     "static/js/23.be13b67e.chunk.js": "/kppr/static/js/23.be13b67e.chunk.js",
     "static/js/81.6b8c0c7c.chunk.js": "/kppr/static/js/81.6b8c0c7c.chunk.js",
     "static/media/provodnik.png": "/kppr/static/media/provodnik.427b6f6e2743569b72cc.png",
@@ -34,13 +34,13 @@
     "static/media/pogarotushenie.jpg": "/kppr/static/media/pogarotushenie.f788c2fd15a7acd40015.jpg",
     "static/media/logo.png": "/kppr/static/media/logo.6d176009970dd370504f.png",
     "index.html": "/kppr/index.html",
-    "main.d4247d4b.css.map": "/kppr/static/css/main.d4247d4b.css.map",
-    "main.7a2d882b.js.map": "/kppr/static/js/main.7a2d882b.js.map",
+    "main.e4935919.css.map": "/kppr/static/css/main.e4935919.css.map",
+    "main.e2c5615c.js.map": "/kppr/static/js/main.e2c5615c.js.map",
     "23.be13b67e.chunk.js.map": "/kppr/static/js/23.be13b67e.chunk.js.map",
     "81.6b8c0c7c.chunk.js.map": "/kppr/static/js/81.6b8c0c7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4247d4b.css",
-    "static/js/main.7a2d882b.js"
+    "static/css/main.e4935919.css",
+    "static/js/main.e2c5615c.js"
   ]
 }
