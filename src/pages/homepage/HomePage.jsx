@@ -15,6 +15,9 @@ import {
 } from "../../appData/homePageData";
 
 function HomePage() {
+  const deviceWidth = window.screen.width;
+  console.log(deviceWidth);
+
   return (
     <>
       <Container>
@@ -43,35 +46,37 @@ function HomePage() {
           </motion.div>
         </section>
 
-        <section className="mb-24 flex items-start justify-center gap-4">
-          <motion.div
-            animate={{ y: ["20%", "-20%", "20%"], opacity: [0, 1] }}
-            transition={{
-              y: {
-                duration: 1,
-                repeat: Infinity,
-                ease: "easeOut",
-                delay: 3,
-              },
-              opacity: {
-                duration: 1,
-                ease: "easeOut",
-                delay: 3,
-              },
-            }}
-          >
-            <FaArrowCircleDown
-              size={30}
-              color="teal"
-            />
-          </motion.div>
-        </section>
+        {deviceWidth >= 768 && (
+          <section className="mb-24 flex items-start justify-center gap-4">
+            <motion.div
+              animate={{ y: ["20%", "-20%", "20%"], opacity: [0, 1] }}
+              transition={{
+                y: {
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                  delay: 3,
+                },
+                opacity: {
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 3,
+                },
+              }}
+            >
+              <FaArrowCircleDown
+                size={30}
+                color="teal"
+              />
+            </motion.div>
+          </section>
+        )}
 
-        <section className="slider min-[900px]:h-[60vh] h-auto min-[540px]:mb-40 mb-20">
+        <section className="">
           <Slider data={createSlide(sliderData)} />
         </section>
 
-        <section className="min-[540px]:mb-40 mb-10">
+        <section className="min-[540px]:mb-40 mb-10 min-[540px]:mt-40 mt-20">
           <motion.div
             className="flex flex-col items-center justify-center"
             initial={{ opacity: 0, y: 100 }}
