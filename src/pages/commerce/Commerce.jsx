@@ -96,7 +96,9 @@ function Commerce() {
               show={activeElement === "element1"}
               className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce p-4">{commerceDataContent(commerceData1)}</div>
+              <div className="commerce min-[576px]:p-4 p-0">
+                {commerceDataContent(commerceData1)}
+              </div>
             </TECollapse>
           </div>
           <div className="border-t border-[#bebebe]">
@@ -142,7 +144,9 @@ function Commerce() {
               show={activeElement === "element2"}
               className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce p-4">{commerceDataContent(commerceData2)}</div>
+              <div className="commerce min-[576px]:p-4 p-0">
+                {commerceDataContent(commerceData2)}
+              </div>
             </TECollapse>
           </div>
           <div className="border-t border-b border-[#bebebe] mb-10">
@@ -188,7 +192,9 @@ function Commerce() {
               show={activeElement === "element3"}
               className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce p-4">{commerceDataContent(commerceData3)}</div>
+              <div className="commerce min-[576px]:p-4 p-0">
+                {commerceDataContent(commerceData3)}
+              </div>
             </TECollapse>
           </div>
           <PageRedirection />

@@ -76,7 +76,7 @@ function HomePage() {
           <Slider data={createSlide(sliderData)} />
         </section>
 
-        <section className="min-[540px]:mb-40 mb-10 min-[540px]:mt-40 mt-20">
+        <section className="min-[576px]:mb-40 mb-10 mt-40">
           <motion.div
             className="flex flex-col items-center justify-center"
             initial={{ opacity: 0, y: 100 }}
@@ -84,14 +84,14 @@ function HomePage() {
             viewport={{ once: true, amount: 0.8 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <h3 className="text-center min-[594px]:text-6xl text-4xl font-semibold my-20 pt-3 pb-5 px-2 bg-[--color-teal] text-[--color-light] w-full block">
+            <h3 className="text-center min-[576px]:text-6xl text-4xl font-semibold min-[576px]:mb-20 mb-10 pt-3 pb-5 px-2 bg-[--color-teal] text-[--color-light] w-full block">
               Наши преимущества
             </h3>
           </motion.div>
           <div className="flex justify-center">{createAdvantages(advantagesData)}</div>
         </section>
 
-        <section className="min-[540px]:mb-40 mb-20">
+        <section className="min-[576px]:mb-40 mb-10 mt-40">
           <motion.div
             className="flex items-center justify-center"
             initial={{ opacity: 0, y: 100 }}
@@ -99,7 +99,7 @@ function HomePage() {
             viewport={{ once: true, amount: 0.8 }}
             transition={{ duration: 1, delay: 0 }}
           >
-            <h3 className="text-center min-[594px]:text-6xl text-4xl font-semibold min-[540px]:my-20 mt-0 mb-10 pt-3 pb-5 px-2 bg-[--color-teal] text-[--color-light] w-full">
+            <h3 className="text-center min-[576px]:text-6xl text-4xl font-semibold min-[576px]:mb-20 mb-10 pt-3 pb-5 px-2 bg-[--color-teal] text-[--color-light] w-full block">
               Наши результаты
             </h3>
           </motion.div>
