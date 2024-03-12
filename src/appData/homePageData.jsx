@@ -42,7 +42,7 @@ const resultsData = [
 
 const createAdvantages = (data) => {
   return (
-    <div className="description p-2 flex items-start justify-center flex-wrap min-[594px]:gap-16 gap-4">
+    <div className="description p-2 flex items-start justify-center flex-wrap min-[576px]:flex-col min-[594px]:gap-16 gap-4">
       {data.map((i, idx) => (
         <motion.div
           className="flex flex-col items-center basis-[15%] rounded-2xl py-4 min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[240px] min-w-[300px] border border-zinc-300"
