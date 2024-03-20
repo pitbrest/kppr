@@ -54,9 +54,9 @@ const createSlide = (data) =>
   data.map((i) => (
     <SwiperSlide key={i.label}>
       <div className="">
-        <div className="flex flex-col justify-start items-center gap-4">
+        <div className="flex flex-col justify-start items-center gap-3">
           <img
-            className="relative shrink-0 basis-4/6"
+            className="relative shrink-0 w-[100%] min-[576px]:w-full min-[576px]:h-auto"
             src={i.img}
             alt="slide_img"
           />

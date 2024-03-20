@@ -16,7 +16,6 @@ import {
 
 function HomePage() {
   const deviceWidth = window.screen.width;
-  console.log(deviceWidth);
 
   return (
     <>
