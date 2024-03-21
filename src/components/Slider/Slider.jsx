@@ -27,8 +27,8 @@ const Slider = ({ data }) => {
         cubeEffect={{
           shadow: false,
           slideShadows: false,
-          shadowOffset: 20,
-          shadowScale: 0.94,
+          shadowOffset: 0,
+          shadowScale: 1,
         }}
         pagination={true}
         modules={[EffectCube, Pagination, Autoplay]}

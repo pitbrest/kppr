@@ -56,7 +56,7 @@ const commerceData3 = [
 const commerceDataContent = (data) =>
   data.map((item) => (
     <div
-      className="commerce-item px-5 py-4 min-[768px]:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] shadow-none flex flex-col gap-2 justify-between items-center rounded-sm border border-[#d1d1d1] h-[280px]"
+      className="commerce-item min-[576px]:px-5 px-2 min-[576px]:py-4 py-2 min-[768px]:shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] shadow-none flex flex-col gap-2 justify-between items-center rounded-sm border border-[#d1d1d1] h-[280px]"
       key={item.title}
     >
       <img

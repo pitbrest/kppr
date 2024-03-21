@@ -22,12 +22,9 @@ const productionHandler = () =>
       className="flex items-center justify-between mb-3"
       key={item.split(",")[0] || item}
     >
-      <div className="flex items-center justify-start gap-6 w-full">
-        <FaCircle
-          size={10}
-          color="teal"
-        />
-        <p className="leading-normal block max-w-[80%]">{item};</p>
+      <div className="flex items-center justify-start min-[576px]:gap-6 gap-3 w-full">
+        <FaCircle size={10} />
+        <p className="min-[576px]:text-base text-sm block max-w-[80%]">{item};</p>
       </div>
       <FaEllipsisVertical size={15} />
     </li>
@@ -38,11 +35,8 @@ const servicesHandler = () =>
       className="flex items-center justify-between mb-3"
       key={item.split(",")[0] || item}
     >
-      <div className="flex items-center justify-start gap-6 w-full">
-        <FaCircle
-          size={10}
-          color="teal"
-        />
+      <div className="flex items-center justify-start min-[576px]:gap-6 gap-3 w-full">
+        <FaCircle size={10} />
         <p className="leading-normal block max-w-[80%]">{item};</p>
       </div>
       <FaEllipsisVertical size={15} />

@@ -29,8 +29,8 @@ function Commerce() {
           id="accordionExample"
           className="max-w-7xl mx-auto text-[--fc-dark]"
         >
-          <div className="mb-10">
-            <h4 className="text-2xl font-bold p-3 bg-[--color-teal] text-[--color-light] text-center mb-10">
+          <div className="mb-10 min-[576px]:text-base text-sm">
+            <h4 className="min-[576px]:text-2xl text-xl font-bold p-3 bg-[--color-teal] text-[--color-light] text-center min-[576px]:mb-10 mb-5">
               Торговля
             </h4>
             <p>
@@ -42,7 +42,7 @@ function Commerce() {
               назначения в соответствии с правилами пожарной безопасности.
             </p>
             <p>
-              Заказать и приобрести товары можно в нашем
+              <strong>Заказать и приобрести </strong>товары можно в нашем
               <a
                 href="/contacts"
                 className="font-bold text-red-700"
@@ -96,7 +96,9 @@ function Commerce() {
               show={activeElement === "element1"}
               className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce p-4">{commerceDataContent(commerceData1)}</div>
+              <div className="commerce min-[576px]:p-4 p-0">
+                {commerceDataContent(commerceData1)}
+              </div>
             </TECollapse>
           </div>
           <div className="border-t border-[#bebebe]">
@@ -142,7 +144,9 @@ function Commerce() {
               show={activeElement === "element2"}
               className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce p-4">{commerceDataContent(commerceData2)}</div>
+              <div className="commerce min-[576px]:p-4 p-0">
+                {commerceDataContent(commerceData2)}
+              </div>
             </TECollapse>
           </div>
           <div className="border-t border-b border-[#bebebe] mb-10">
@@ -188,7 +192,9 @@ function Commerce() {
               show={activeElement === "element3"}
               className="!mt-0 !rounded-none shadow-none"
             >
-              <div className="commerce p-4">{commerceDataContent(commerceData3)}</div>
+              <div className="commerce min-[576px]:p-4 p-0">
+                {commerceDataContent(commerceData3)}
+              </div>
             </TECollapse>
           </div>
           <PageRedirection />
