@@ -28,11 +28,13 @@ const PageNavigation = () => {
     scrollY >= 100 && (
       <div className="page-navigation flex flex-col gap-2 fixed top-[47vh] right-[1rem] z-50">
         <FaArrowAltCircleUp
+          className="cursor-pointer"
           onClick={() => pageScrollingHandler("top")}
           size={30}
           color="#5e6d7a"
         />
         <FaArrowAltCircleDown
+          className="cursor-pointer"
           onClick={() => pageScrollingHandler("bottom")}
           size={30}
           color="#5e6d7a"
