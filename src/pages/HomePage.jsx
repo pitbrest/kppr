@@ -1,18 +1,18 @@
-import { Container } from "../../components/Container";
-import Bg_1 from "../../assets/images/bg-1.png";
-import Bg_2 from "../../assets/images/bg-2.png";
+import { Container } from "../components/Container";
+import Bg_1 from "../assets/images/bg-1.png";
+import Bg_2 from "../assets/images/bg-2.png";
 import { FaArrowCircleDown } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 
-import { Slider } from "../../components/Slider/Slider";
-import { sliderData, createSlide } from "../../appData/sliderData";
+import { Slider } from "../components/Slider/Slider";
+import { sliderData, createSlide } from "../appData/sliderData";
 import {
   advantagesData,
   createAdvantages,
   resultsData,
   createResults,
-} from "../../appData/homePageData";
+} from "../appData/homePageData";
 
 function HomePage() {
   const deviceWidth = window.screen.width;

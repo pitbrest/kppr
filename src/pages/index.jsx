@@ -5,6 +5,6 @@ import News from "./News";
 import Production from "./Production";
 import Services from "./Services";
 import Commerce from "./commerce/Commerce";
-import HomePage from "./homepage/HomePage";
+import HomePage from "./HomePage";
 
 export { About, Contacts, ErrorPage, News, Production, Services, Commerce, HomePage };
