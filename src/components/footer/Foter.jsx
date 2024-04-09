@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "../Container";
 import { SiGithub } from "react-icons/si";
 import { FaRegCopyright } from "react-icons/fa";
-import Inst from "../../assets/images/instagram.png";
+import Inst from "../../assets/images/icons/instagram.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();

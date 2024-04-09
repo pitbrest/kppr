@@ -49,3 +49,49 @@ header img {
   -webkit-filter: invert(99%) sepia(61%) saturate(443%) hue-rotate(208deg) brightness(332%)
     contrast(100%);
 }
+/* Homepage */
+/* .homepage-bg {
+  background: url(./assets/images/side-img.jpg) no-repeat top -50px right 0;
+  background-size: contain;
+} */
+
+/* .hp-list-item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #282727;
+  border-left: 2px solid #282727;
+}
+.hp-list-item::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #282727;
+  border-right: 2px solid #282727;
+}
+.homepage-bg li::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid #282727;
+  border-right: 2px solid #282727;
+}
+.homepage-bg li::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #282727;
+  border-left: 2px solid #282727;
+} */
