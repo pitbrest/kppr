@@ -10,6 +10,7 @@ const servicesData = {
     "устройство и ремонт систем молниезащиты зданий и сооружений",
   ],
   services: [
+    "торговля средствами обеспечения пожарной безопасности и сопутствующими товарами (огнетушители, пожарные извещатели, сигнализаторы загазованности, наглядная агитация и многое другое",
     "проверка технического состояния дымовых и вентиляционных каналов, определение воздухообмена, проверка дымовых каналов на наличие тяги",
     "разработка и печать планов эвакуации людей при пожаре, схем движения транспорта и пр.",
     "подготовка по программе пожарно-технического минимума (ПТМ)",
@@ -24,7 +25,7 @@ const productionHandler = () =>
     >
       <div className="flex items-center justify-start min-[576px]:gap-6 gap-3 w-full">
         <FaCircle size={10} />
-        <p className="min-[576px]:text-base text-sm block max-w-[80%]">{item};</p>
+        <h2 className="min-[576px]:text-base text-sm block max-w-[80%]">{item};</h2>
       </div>
       <FaEllipsisVertical size={15} />
     </li>
@@ -37,7 +38,7 @@ const servicesHandler = () =>
     >
       <div className="flex items-center justify-start min-[576px]:gap-6 gap-3 w-full">
         <FaCircle size={10} />
-        <p className="leading-normal block max-w-[80%]">{item};</p>
+        <h2 className="leading-normal block max-w-[80%]">{item};</h2>
       </div>
       <FaEllipsisVertical size={15} />
     </li>
