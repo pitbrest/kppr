@@ -1,7 +1,6 @@
 import { Container } from "../components/Container";
 import Bg_1 from "../assets/images/bg-1.png";
 import Bg_2 from "../assets/images/bg-2.png";
-import Side_img from "../assets/images/side-img.jpg";
 import Ps from "../assets/images/icons/ps.png";
 import Cd from "../assets/images/icons/cd.png";
 import Sp from "../assets/images/icons/sp.png";
