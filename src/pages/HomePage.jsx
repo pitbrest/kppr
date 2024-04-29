@@ -1,6 +1,9 @@
 import { Container } from "../components/Container";
 import Main_img from "../assets/images/main-img.jpg";
 import Stamp from "../assets/images/stamp.png";
+import Rgoo from "../assets/images/rgoo.png";
+import Bdpo from "../assets/images/bdpo.jpg";
+
 import { productionHandler, servicesHandler } from "../appData/servicesData";
 
 import { FaArrowCircleDown } from "react-icons/fa";
@@ -17,14 +20,30 @@ import {
 } from "../appData/homePageData";
 
 function HomePage() {
-  const deviceWidth = window.screen.width;
+  // const deviceWidth = window.screen.width;
 
   return (
     <>
       <Container>
         <section className="flex flex-col justify-start items-center mb-28 relative">
+          <div className="flex justify-center items-center gap-14">
+            <img
+              className="max-h-[150px] w-auto object-contain"
+              src={Rgoo}
+              alt="alt"
+            />
+            <h1 className="min-[576px]:text-5xl text-4xl text-center font-semibold">
+              Брестский областной комбинат
+              <br /> противопожарных работ
+            </h1>
+            <img
+              className="max-w-[300px] h-auto object-contain"
+              src={Bdpo}
+              alt="alt"
+            />
+          </div>
           <img
-            className="w-auto max-h-[700px]"
+            className="w-auto max-h-[670px]"
             src={Main_img}
             alt="main-img"
           />
@@ -73,10 +92,10 @@ function HomePage() {
 
         <section className="flex justify-start items-center mt-6 mb-4 relative ">
           <div className="homepage-bg w-full ">
-            <h1 className="min-[576px]:text-6xl text-4xl text-center font-semibold pt-3 pb-5 px-2 mb-16 w-full block">
+            <h2 className="min-[576px]:text-6xl text-4xl text-center font-semibold pt-3 pb-5 px-2 mb-16 w-full block">
               Комплексные решения <br />
               вопросов безопасности
-            </h1>
+            </h2>
             <div className="max-w-7xl mx-auto text-[--fc-dark] min-[576px]:px-10 px-2 mb-5">
               <div className="text-base min-[576px]:mb-20 mb-10">
                 <ul className="min-[576px]:mb-20 mb-10">
