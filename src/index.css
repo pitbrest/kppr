@@ -31,7 +31,9 @@ a {
   cursor: pointer;
   font-weight: 500;
 }
-
+.homepage-bg > h2 {
+  font-size: calc(30px + 12 * ((100vw - 320px) / (1440 - 320))) !important;
+}
 h5 {
   font-size: calc(28px + 4 * ((100vw - 320px) / (1280 - 320))) !important;
   line-height: 30px !important;
@@ -50,6 +52,22 @@ header img {
     contrast(100%);
 }
 /* Homepage */
+.homepage-title__small {
+  display: none;
+  visibility: hidden;
+}
+@media (max-width: 1200px) {
+  .homepage-title__large {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (max-width: 1200px) {
+  .homepage-title__small {
+    display: block;
+    visibility: visible;
+  }
+}
 /* .homepage-bg {
   background: url(./assets/images/side-img.jpg) no-repeat top -50px right 0;
   background-size: contain;

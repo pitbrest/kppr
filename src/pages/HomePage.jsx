@@ -26,24 +26,42 @@ function HomePage() {
     <>
       <Container>
         <section className="flex flex-col justify-start items-center mb-28 relative">
-          <div className="flex justify-center items-center gap-14">
+          <div className="homepage-title__large flex justify-center items-center gap-20 flex-wrap">
             <img
-              className="max-h-[150px] w-auto object-contain"
+              className="h-[70px]"
               src={Rgoo}
               alt="alt"
             />
-            <h1 className="min-[576px]:text-5xl text-4xl text-center font-semibold">
+            <h1 className="min-[576px]:text-5xl text-3xl text-center font-semibold">
               Брестский областной комбинат
               <br /> противопожарных работ
             </h1>
             <img
-              className="max-w-[300px] h-auto object-contain"
+              className="h-[70px]"
               src={Bdpo}
               alt="alt"
             />
           </div>
+          <div className="homepage-title__small flex justify-center items-center gap-14 flex-wrap">
+            <div className="flex items-center justify-between gap-20">
+              <img
+                className="min-[576px]:max-h-[70px] max-h-[50px]"
+                src={Rgoo}
+                alt="alt"
+              />
+              <img
+                className="min-[576px]:max-h-[70px] max-h-[50px]"
+                src={Bdpo}
+                alt="alt"
+              />
+            </div>
+            <h1 className="min-[576px]:text-5xl text-3xl text-center font-semibold mt-8">
+              Брестский областной комбинат
+              <br /> противопожарных работ
+            </h1>
+          </div>
           <img
-            className="w-auto max-h-[670px]"
+            className="w-auto max-h-[630px] mt-12"
             src={Main_img}
             alt="main-img"
           />
@@ -66,7 +84,7 @@ function HomePage() {
           </motion.div>
         </section>
 
-        <section className="mb-24 flex items-start justify-center gap-4">
+        <section className="-mt-[25px] flex items-start justify-center gap-4">
           <motion.div
             animate={{ y: ["20%", "-20%", "20%"], opacity: [0, 1] }}
             transition={{
@@ -90,9 +108,9 @@ function HomePage() {
           </motion.div>
         </section>
 
-        <section className="flex justify-start items-center mt-6 mb-4 relative ">
+        <section className="flex justify-start items-center mt-20 mb-4 relative ">
           <div className="homepage-bg w-full ">
-            <h2 className="min-[576px]:text-6xl text-4xl text-center font-semibold pt-3 pb-5 px-2 mb-16 w-full block">
+            <h2 className="min-[576px]:text-6xl text-4xl text-center font-semibold pt-3 pb-5 px-2 min-[576px]:mb-16 mb-2 w-full block">
               Комплексные решения <br />
               вопросов безопасности
             </h2>
@@ -143,7 +161,7 @@ function HomePage() {
         <section className="">
           <Slider data={createSlide(sliderData)} />
         </section>
-        <section className="mt-40 mb-24 flex items-start justify-center gap-4">
+        <section className="min-[576px]:mt-40 min-[576px]:mb-24 my-20 flex items-start justify-center gap-4">
           <motion.div
             animate={{ y: ["20%", "-20%", "20%"], opacity: [0, 1] }}
             transition={{
@@ -167,7 +185,7 @@ function HomePage() {
           </motion.div>
         </section>
 
-        <section className="min-[576px]:mb-40 mb-10 mt-40">
+        <section className="min-[576px]:mb-40 min-[576px]:mt-40 mb-10 mt-0">
           <motion.div
             className="flex flex-col items-center justify-center"
             initial={{ opacity: 0, y: 100 }}
