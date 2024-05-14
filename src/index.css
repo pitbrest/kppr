@@ -46,11 +46,11 @@ h5 {
 .about a:hover {
   text-decoration: underline;
 }
-header img {
+/* header img {
   filter: invert(99%) sepia(61%) saturate(443%) hue-rotate(208deg) brightness(332%) contrast(100%);
   -webkit-filter: invert(99%) sepia(61%) saturate(443%) hue-rotate(208deg) brightness(332%)
     contrast(100%);
-}
+} */
 /* Homepage */
 .homepage-title__small {
   display: none;

@@ -12,14 +12,14 @@ export const Footer = () => {
       <Container>
         <div className="flex justify-between items-center">
           <div className="flex gap-2 items-center">
-            <FaRegCopyright />
-            <span>2023-{currentYear},</span>
+            <FaRegCopyright size={15} />
+            <span>2023-{currentYear}</span>
             <a
               href="https://pitbrest.github.io/CV/#projects"
               target="_blank"
               rel="noreferrer"
             >
-              pitbrest
+              {" "}
             </a>
             <a
               href="https://github.com/pitbrest"

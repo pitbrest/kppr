@@ -118,8 +118,8 @@ function HomePage() {
               <div className="text-base min-[576px]:mb-20 mb-10">
                 <ul className="min-[576px]:mb-20 mb-10">
                   <p className="min-[576px]:text-xl text-lg font-bold p-3 bg-[--color-teal] text-[--color-light] min-[576px]:mb-10 mb-5 min-[576px]:leading-7 !leading-tight">
-                    Выполняем строительно-монтажные работы противопожарного профиля а также в
-                    смежных направлениях
+                    Выполняем строительно-монтажные работы противопожарного профиля и смежных
+                    направлений
                   </p>
                   {productionHandler()}
                 </ul>

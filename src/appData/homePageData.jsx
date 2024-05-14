@@ -43,18 +43,18 @@ const resultsData = [
 const createAdvantages = (data) => {
   return (
     <div className="description p-2 flex items-start justify-center flex-wrap  min-[594px]:gap-16 gap-4">
-      {data.map((i, idx) => (
+      {data.map((i) => (
         <motion.div
-          className="flex flex-col items-center justify-center min-[576px]:basis-[15%] basis-[100%] rounded-2xl min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[220px] min-w-[300px] text-[--color-green] border border-zinc-300"
+          className="flex flex-col items-center justify-center min-[576px]:basis-[15%] basis-[100%] rounded-2xl min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[220px] min-w-[300px] text-[#dd4243] border border-zinc-300"
           initial={{ opacity: 0, y: 100, rotate: +30 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           viewport={{ once: true, amount: 0.8 }}
           key={i.advantage}
           transition={{ duration: 1 }}
         >
-          <i.img className="text-[--color-green] basis-[40%] w-full color-[red]" />
+          <i.img className="basis-[40%] w-full" />
           <span className="w-[80%] border-t border-2 border-[rgba(50,50,93,0.25)] mt-5 mb-2"></span>
-          <div className="leading-5 px-3 pt-2 text-center font-medium text-lg w-[95%] hyphens-auto text-wrap">
+          <div className="leading-5 px-3 pt-2 text-center font-medium text-lg w-[95%] hyphens-auto text-wrap text-[--color-dark]">
             {i.advantage}
           </div>
         </motion.div>
@@ -66,9 +66,9 @@ const createAdvantages = (data) => {
 const createResults = (data) => {
   return (
     <div className="description p-2 flex items-center justify-center flex-wrap min-[594px]:gap-16 gap-4">
-      {data.map((i, idx) => (
+      {data.map((i) => (
         <motion.div
-          className="flex flex-col items-center justify-center min-[576px]:basis-[15%] basis-[100%] rounded-2xl min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[220px] min-w-[300px] text-[--color-green] border border-zinc-300"
+          className="flex flex-col items-center justify-center min-[576px]:basis-[15%] basis-[100%] rounded-2xl min-[594px]:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] shadow-none flex-shrink-0 flex-grow-0 h-[220px] min-w-[300px] text-[#dd4243] border border-zinc-300"
           initial={{ opacity: 0, y: 100, rotate: +30 }}
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           viewport={{ once: true, amount: 0.8 }}
