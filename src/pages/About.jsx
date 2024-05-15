@@ -1,5 +1,6 @@
 import { Container } from "../components/Container";
 import { PageRedirection } from "../components/page-navigation/PageNavigation";
+import Belarus from "../assets/images/belarus.png";
 
 function About() {
   return (
@@ -33,7 +34,7 @@ function About() {
           пожарных извещателей, огнезащитных составов для деревянных конструкций и пр.
         </p>
 
-        <p className="pt-3 mb-10">
+        <p className="pt-3 mb-2">
           <span className="font-medium">
             Унитарное предприятие "Брестский областной комбинат противопожарных работ" РГОО "БДПО"
           </span>
@@ -42,6 +43,11 @@ function About() {
           центрах Брестской области: г.Кобрин, г.Пружаны, г.Береза, г.Ивацевичи, г.Барановичи,
           г.Дрогичин, г.Пинск, г.Лунинец и г.Столин.
         </p>
+        <img
+          className="mx-auto mb-8 max-w-lg"
+          src={Belarus}
+          alt="map_of_Belarus"
+        />
         <PageRedirection />
       </div>
     </Container>

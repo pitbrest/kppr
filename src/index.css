@@ -42,6 +42,7 @@ h5 {
 /* About */
 .about {
   text-align: justify;
+  min-height: 100vh;
 }
 .about a:hover {
   text-decoration: underline;

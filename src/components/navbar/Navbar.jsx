@@ -21,7 +21,7 @@ const NavBar = ({ modalToggler, isDropDownOpen, dropDownToggler }) => {
         />
       </div>
       <div>
-        <ul className="min-[768px]:flex hidden items-center gap-4 font-bold">
+        <ul className="min-[768px]:flex hidden items-center gap-3 font-bold">
           {navItems.map((item) =>
             item.name !== "Деятельность" ? (
               <NavLink

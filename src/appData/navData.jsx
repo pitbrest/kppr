@@ -10,6 +10,7 @@ const navItems = [
   { id: 3, name: "О нас", href: "about", active: false },
   { id: 4, name: "Новости", href: "news", active: false },
   { id: 5, name: "Контакты", href: "contacts", active: false },
+  { id: 5, name: "Документы", href: "contacts", active: false },
 ];
 
 const servicesData = [
