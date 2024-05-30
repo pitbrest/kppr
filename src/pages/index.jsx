@@ -7,5 +7,17 @@ import Production from "./Production";
 import Services from "./Services";
 import Commerce from "./commerce/Commerce";
 import HomePage from "./HomePage";
+import CheckingPage from "./CheckingPage";
 
-export { About, Contacts, ErrorPage, News, Documents, Production, Services, Commerce, HomePage };
+export {
+  About,
+  Contacts,
+  ErrorPage,
+  News,
+  Documents,
+  Production,
+  Services,
+  Commerce,
+  HomePage,
+  CheckingPage,
+};

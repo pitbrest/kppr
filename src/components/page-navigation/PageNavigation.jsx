@@ -68,7 +68,7 @@ const PageRedirection = (alt = null) => {
       />
       <Button
         title="Документы"
-        src="/documents"
+        src="/checking"
       />
     </div>
   );
