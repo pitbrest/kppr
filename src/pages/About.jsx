@@ -48,7 +48,7 @@ function About() {
           src={Belarus}
           alt="map_of_Belarus"
         />
-        <PageRedirection />
+        <PageRedirection alt />
       </div>
     </Container>
   );

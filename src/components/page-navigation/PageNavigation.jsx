@@ -44,8 +44,8 @@ const PageNavigation = () => {
   );
 };
 
-const PageRedirection = () => {
-  return (
+const PageRedirection = (alt = null) => {
+  return !alt ? (
     <div className="flex min-[574px]:justify-end justify-center gap-5">
       <Button
         title="На главную"
@@ -54,6 +54,21 @@ const PageRedirection = () => {
       <Button
         title="Контакты"
         src="/contacts"
+      />
+    </div>
+  ) : (
+    <div className="flex min-[574px]:justify-end justify-center gap-5">
+      <Button
+        title="На главную"
+        src="/"
+      />
+      <Button
+        title="Контакты"
+        src="/contacts"
+      />
+      <Button
+        title="Документы"
+        src="/checking"
       />
     </div>
   );

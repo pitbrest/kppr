@@ -4,8 +4,6 @@ import Stamp from "../assets/images/stamp.png";
 import Rgoo from "../assets/images/rgoo.png";
 import Bdpo from "../assets/images/bdpo.jpg";
 
-import { productionHandler, servicesHandler } from "../appData/servicesData";
-
 import { FaArrowCircleDown } from "react-icons/fa";
 
 import { motion } from "framer-motion";
@@ -17,6 +15,9 @@ import {
   createAdvantages,
   resultsData,
   createResults,
+  createWorks,
+  createServices,
+  servicesData,
 } from "../appData/homePageData";
 
 function HomePage() {
@@ -121,13 +122,13 @@ function HomePage() {
                     Выполняем строительно-монтажные работы противопожарного профиля и смежных
                     направлений
                   </p>
-                  {productionHandler()}
+                  {createWorks(servicesData)}
                 </ul>
                 <ul>
                   <p className="min-[576px]:text-xl text-lg font-bold p-3 bg-[--color-teal] text-[--color-light] min-[576px]:mb-10 mb-5 min-[576px]:leading-7 !leading-tight">
                     Оказываем услуги
                   </p>
-                  {servicesHandler()}
+                  {createServices(servicesData)}
                 </ul>
               </div>
             </div>
