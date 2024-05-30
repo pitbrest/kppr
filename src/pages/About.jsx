@@ -44,7 +44,7 @@ function About() {
           г.Дрогичин, г.Пинск, г.Лунинец и г.Столин.
         </p>
         <img
-          className="mx-auto mb-8 max-w-lg"
+          className="mx-auto mb-8 min-[576px]:max-w-lg max-w-[90%]"
           src={Belarus}
           alt="map_of_Belarus"
         />
