@@ -71,7 +71,7 @@ const createServices = (data) => {
           size={15}
           className="mt-1"
         />
-        <h2 className="min-[576px]:text-base text-sm block min-[576px]:max-w-[95%] max-w-[90%]">
+        <h2 className="min-[576px]:text-lg text-base block min-[576px]:max-w-[95%] max-w-[90%]">
           {item};
         </h2>
       </div>

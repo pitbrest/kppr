@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
-import { About, Contacts, ErrorPage, News, Services, Commerce, HomePage } from "./pages";
+import { About, Contacts, ErrorPage, News, Documents, Services, Commerce, HomePage } from "./pages";
 import React from "react";
 
 function App() {
@@ -33,6 +33,10 @@ function App() {
         <Route
           path="contacts"
           element={<Contacts />}
+        />
+        <Route
+          path="documents"
+          element={<Documents />}
         />
         <Route
           path="*"
