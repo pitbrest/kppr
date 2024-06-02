@@ -25,7 +25,6 @@ function CheckingPage() {
   const inputHandler = (e) => setValue(e.target.value);
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(password);
     password === value ? navigate("/documents") : navigate("/");
   };
 

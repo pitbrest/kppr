@@ -1,17 +1,7 @@
 import { Container } from "../components/Container";
 
 function Documents() {
-  return (
-    <Container>
-      <a
-        href="../assets/documents/37_vse kabeli.pdf"
-        download
-        title="doc"
-      >
-        doc
-      </a>
-    </Container>
-  );
+  return <Container>Documents</Container>;
 }
 
 export default Documents;
