@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: 
 Crawl-delay: 1
-Host: https://kppr.site
+Host: https://kppr.site/
 Sitemap: https://kppr.site/sitemap.xml
