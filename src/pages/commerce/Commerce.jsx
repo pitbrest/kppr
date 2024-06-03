@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { TECollapse } from "tw-elements-react";
 import { Container } from "../../components/Container";
 import {
@@ -34,23 +35,25 @@ function Commerce() {
               Торговля
             </h4>
             <p>
-              Реализуем первичные средства пожаротушения, оборудование и сопутствующие товары
-              противопожарной тематики.
+              Реализуем первичные средства пожаротушения, оборудование и
+              сопутствующие товары противопожарной тематики.
             </p>
             <p className="pb-2">
-              Широкий спектр представленных товаров поможет Вам оснастить здания и сооружения любого
-              назначения в соответствии с правилами пожарной безопасности.
+              Широкий спектр представленных товаров поможет Вам оснастить здания
+              и сооружения любого назначения в соответствии с правилами пожарной
+              безопасности.
             </p>
             <p>
-              <strong>Заказать и приобрести </strong>товары можно в нашем
-              <a
-                href="/contacts"
+              <strong>Заказать и приобрести </strong>товары можно в нашем{" "}
+              <span> </span>
+              <Link
+                to="/contacts"
                 className="font-bold text-red-700"
               >
-                {" "}
-                магазине 101{" "}
-              </a>
-              в г.Бресте, а также обратившись в нашу региональную сеть.
+                магазине 101
+              </Link>
+              <span> </span>в г.Бресте, а также обратившись в нашу региональную
+              сеть.
             </p>
           </div>
           <div className=" border-t border-[#bebebe]">
@@ -60,7 +63,8 @@ function Commerce() {
             >
               <button
                 className={`${
-                  activeElement === "element1" && `underline underline-offset-2 deco`
+                  activeElement === "element1" &&
+                  `underline underline-offset-2 deco`
                 } min-[576px]: font-medium min-[576px]:text-xl text-base group relative flex w-full items-center rounded-t-[15px] border-0 rounded-xl bg-white ps-5 py-2 text-left transition [overflow-anchor:none] hover:z-[2] pr-20`}
                 type="button"
                 onClick={() => handleClick("element1")}
