@@ -19,7 +19,7 @@ function CheckingPage() {
         ? "0".concat(date.getMonth() + 1)
         : date.getMonth() + 1;
     const year = date.getFullYear();
-    return [day, month, year].join(".");
+    return [day, month, year].join("");
   };
 
   const inputHandler = (e) => setValue(e.target.value);
@@ -57,7 +57,7 @@ function CheckingPage() {
                 name="text"
                 id="password"
                 placeholder="пароль"
-                className="p-5 border rounded-sm w-[30%] tracking-wider font-semibold"
+                className="p-5 border rounded-sm w-[45%] tracking-wider font-semibold"
                 value={value}
                 onChange={inputHandler}
               />
