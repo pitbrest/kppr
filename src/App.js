@@ -10,7 +10,7 @@ import {
   Services,
   Commerce,
   HomePage,
-} from "./pages";
+} from "./pages/index";
 import BobsPage from "./pages/nested/BobsPage";
 
 function App() {
