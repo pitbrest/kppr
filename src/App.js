@@ -11,7 +11,7 @@ import {
   Commerce,
   HomePage,
 } from "./pages";
-import React from "react";
+import BobsPage from "./pages/nested/BobsPage";
 
 function App() {
   return (
@@ -33,8 +33,12 @@ function App() {
           element={<Services />}
         />
         <Route
-          path="activities/commerce"
+          path="/activities/commerce"
           element={<Commerce />}
+        />
+        <Route
+          path="/activities/commerce/bobs"
+          element={<BobsPage />}
         />
         <Route
           path="news"

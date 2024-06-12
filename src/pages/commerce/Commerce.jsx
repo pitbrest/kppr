@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { TECollapse } from "tw-elements-react";
 import { Container } from "../../components/Container";
 import {
-  commerceDataContent,
+  CommerceDataContent,
   commerceData1,
   commerceData2,
   commerceData3,
@@ -101,7 +101,7 @@ function Commerce() {
               className="!mt-0 !rounded-none shadow-none"
             >
               <div className="commerce min-[576px]:p-4 p-0">
-                {commerceDataContent(commerceData1)}
+                {CommerceDataContent(commerceData1)}
               </div>
             </TECollapse>
           </div>
@@ -149,7 +149,7 @@ function Commerce() {
               className="!mt-0 !rounded-none shadow-none"
             >
               <div className="commerce min-[576px]:p-4 p-0">
-                {commerceDataContent(commerceData2)}
+                {CommerceDataContent(commerceData2)}
               </div>
             </TECollapse>
           </div>
@@ -197,7 +197,7 @@ function Commerce() {
               className="!mt-0 !rounded-none shadow-none"
             >
               <div className="commerce min-[576px]:p-4 p-0">
-                {commerceDataContent(commerceData3)}
+                {CommerceDataContent(commerceData3)}
               </div>
             </TECollapse>
           </div>
