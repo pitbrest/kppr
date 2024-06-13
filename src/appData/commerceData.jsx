@@ -12,7 +12,7 @@ import Provodnik from "../assets/images/commerce/provodnik.png";
 import Derzhateli from "../assets/images/commerce/derzhateli.png";
 import Zazhimi from "../assets/images/commerce/zazhimi.png";
 import Komplekti from "../assets/images/commerce/komplekti.png";
-import Bobs from "../assets/images/commerce/bobs.png";
+import Bobs from "../assets/images/commerce/bobs.jpg";
 import KMD_O_M from "../assets/images/commerce/kmd-o-m.png";
 
 import { useNavigate } from "react-router-dom";
